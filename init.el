@@ -1,20 +1,16 @@
-; (package-initialize)
 
-(load "~/.emacs.d/my-packages.el")
+; (package-initialize) ; done in use-package initialization
+
+; Load files with individual packages and corresponding configs:
+(load "~/.emacs.d/my-usepackages.el")
+(load "~/.emacs.d/my-theme.el")
+(load "~/.emacs.d/my-evil.el")
+(use-package magit)
+
+; my-afterinit.el overrides whatever a rogue package may have done
 (add-hook 'after-init-hook '(lambda () (load "~/.emacs.d/my-afterinit.el")))
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   (quote
-    ("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default)))
- '(package-selected-packages (quote (use-package))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+; customizations go to another file, not to this one
+(setq custom-file "~/.emacs-custom.el")
+(write-region "" nil custom-file)
+(load custom-file)
