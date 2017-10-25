@@ -6,6 +6,7 @@
 (load "~/.emacs.d/my-theme.el")
 (load "~/.emacs.d/my-evil.el")
 (use-package magit)
+(load "~/.emacs.d/my-autosave.el")
 
 ; my-afterinit.el overrides whatever a rogue package may have done
 (add-hook 'after-init-hook '(lambda () (load "~/.emacs.d/my-afterinit.el")))
