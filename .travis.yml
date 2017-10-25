@@ -1,0 +1,15 @@
+language: nix
+
+# omnilint
+sudo: required
+services:
+  - docker
+before_install:
+  - docker pull lpenz/omnilint
+
+install:
+  - nix-env -i emacs python2.7-ansible
+
+script:
+  - docker run --rm -v "$PWD:$PWD" -e "RWD=$PWD" -e "MY_UID=$UID" lpenz/omnilint
+  - ansible-playbook -i localhost, -c local ansible-playbook.yml

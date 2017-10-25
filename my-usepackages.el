@@ -4,7 +4,7 @@
 (require 'package)
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
+; (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t) ;; ssl error
 (package-initialize)
 ; Bootstrap use-package
 (unless (package-installed-p 'use-package)
