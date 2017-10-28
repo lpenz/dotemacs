@@ -1,4 +1,4 @@
-; my-evil.el
+;; my-evil.el
 
 (use-package evil
     :config

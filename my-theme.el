@@ -1,4 +1,4 @@
-; my-theme.el
+;; my-theme.el
 
 (use-package spacemacs-theme
   :defer t

@@ -1,4 +1,4 @@
-; my-helm.el
+;; my-helm.el
 
 (use-package helm-core :defer t)
 (use-package helm
