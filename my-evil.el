@@ -9,6 +9,7 @@
   (define-key evil-normal-state-map (kbd "SPC f f") 'find-file)
   (define-key evil-normal-state-map (kbd "SPC b b") 'switch-to-buffer)
   (define-key evil-normal-state-map (kbd "SPC g s") 'magit-status)
+  (define-key evil-normal-state-map (kbd "<f4>") 'next-error)
 
   (use-package evil-nerd-commenter
     :config

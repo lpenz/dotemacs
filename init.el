@@ -9,6 +9,13 @@
 (use-package evil-magit)
 (load "~/.emacs.d/my-ivy.el")
 (load "~/.emacs.d/my-autosave.el")
+(load "~/.emacs.d/my-projectile.el")
+
+;; Settings: ;;;;;;
+
+;; split compilation window down:
+(setq split-height-threshold nil)
+(setq split-width-threshold most-positive-fixnum)
 
 ;; my-afterinit.el overrides whatever a rogue package may have done
 (add-hook 'after-init-hook '(lambda () (load "~/.emacs.d/my-afterinit.el")))
