@@ -7,6 +7,7 @@
 (load "~/.emacs.d/my-evil.el")
 (use-package magit)
 (use-package evil-magit)
+(load "~/.emacs.d/my-ivy.el")
 (load "~/.emacs.d/my-autosave.el")
 
 ;; my-afterinit.el overrides whatever a rogue package may have done
