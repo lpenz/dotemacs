@@ -11,6 +11,9 @@
 (load "~/.emacs.d/my-autosave.el")
 (load "~/.emacs.d/my-projectile.el")
 
+;; languages
+(use-package rust-mode)
+
 ;; Settings: ;;;;;;
 
 ;; split compilation window down:
