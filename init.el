@@ -22,6 +22,9 @@
 (setq split-height-threshold nil)
 (setq split-width-threshold most-positive-fixnum)
 
+;; Avoid screen flicker due to visual bell
+(setq visible-bell nil)
+
 ;; my-afterinit.el overrides whatever a rogue package may have done
 (add-hook 'after-init-hook '(lambda () (load "~/.emacs.d/my-afterinit.el")))
 
