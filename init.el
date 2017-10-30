@@ -10,7 +10,7 @@
 (load "~/.emacs.d/my-ivy.el")
 (load "~/.emacs.d/my-autosave.el")
 (load "~/.emacs.d/my-projectile.el")
-(use-package flycheck)
+(load "~/.emacs.d/my-flycheck.el")
 
 ;; languages
 (use-package rust-mode)
