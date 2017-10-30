@@ -22,4 +22,5 @@
 (use-package counsel
   :config
   (define-key evil-normal-state-map (kbd "SPC s") 'counsel-rg)
+  (define-key evil-normal-state-map (kbd "SPC f f") 'counsel-find-file)
   )
