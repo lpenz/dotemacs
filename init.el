@@ -7,6 +7,7 @@
 (load "~/.emacs.d/my-evil.el")
 (use-package magit)
 (use-package evil-magit)
+(use-package fill-column-indicator)
 (load "~/.emacs.d/my-ivy.el")
 (load "~/.emacs.d/my-autosave.el")
 (load "~/.emacs.d/my-projectile.el")
