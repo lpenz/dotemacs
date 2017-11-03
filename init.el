@@ -12,6 +12,7 @@
 (load "~/.emacs.d/my-autosave.el")
 (load "~/.emacs.d/my-projectile.el")
 (load "~/.emacs.d/my-flycheck.el")
+(load "~/.emacs.d/my-winum.el")
 
 ;; languages
 (use-package rust-mode)
