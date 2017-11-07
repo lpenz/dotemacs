@@ -21,10 +21,6 @@
 
 ;; Settings: ;;;;;;
 
-;; split compilation window down:
-(setq split-height-threshold nil)
-(setq split-width-threshold most-positive-fixnum)
-
 ;; Avoid screen flicker due to visual bell
 (setq visible-bell nil)
 
