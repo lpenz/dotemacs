@@ -17,7 +17,9 @@
   ;; configure regexp engine.
   (setq ivy-re-builders-alist
 	;; allow input not in order
-	'((t   . ivy--regex-ignore-order))))
+	'((t   . ivy--regex-ignore-order)))
+  (define-key evil-normal-state-map (kbd "SPC r") 'ivy-resume)
+  )
 
 (use-package counsel
   :config
