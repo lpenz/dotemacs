@@ -23,8 +23,8 @@
 
 (use-package counsel
   :config
-  (define-key evil-normal-state-map (kbd "SPC s") 'counsel-rg)
-  (define-key evil-normal-state-map (kbd "SPC f f") 'counsel-find-file)
-  (define-key evil-normal-state-map (kbd "SPC m") 'counsel-bookmark)
-  (define-key evil-normal-state-map (kbd "SPC z") 'counsel-fzf)
+  (general-define-key "SPC s" 'counsel-rg)
+  (general-define-key "SPC f f" 'counsel-find-file)
+  (general-define-key "SPC m" 'counsel-bookmark)
+  (general-define-key "SPC z" 'counsel-fzf)
   )

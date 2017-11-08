@@ -4,6 +4,7 @@
 ;; Load files with individual packages and corresponding configs:
 (load "~/.emacs.d/my-usepackages.el")
 (load "~/.emacs.d/my-theme.el")
+(load "~/.emacs.d/my-general.el")
 (load "~/.emacs.d/my-evil.el")
 (use-package magit)
 (use-package evil-magit)

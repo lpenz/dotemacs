@@ -3,16 +3,16 @@
 (use-package evil
   :config
   (evil-mode 1)
-  (define-key evil-insert-state-map (kbd "<f2>") 'save-buffer)
-  (define-key evil-normal-state-map (kbd "<f2>") 'save-buffer)
-  (define-key evil-normal-state-map (kbd "SPC TAB") 'evil-buffer)
-  ;; (define-key evil-normal-state-map (kbd "SPC f f") 'find-file)
-  (define-key evil-normal-state-map (kbd "SPC b b") 'switch-to-buffer)
-  (define-key evil-normal-state-map (kbd "SPC g s") 'magit-status)
-  (define-key evil-normal-state-map (kbd "<f4>") 'next-error)
+  (general-define-key "<f2>" 'save-buffer)
+  (general-define-key "<f2>" 'save-buffer)
+  (general-define-key "SPC TAB" 'evil-buffer)
+  ;; (general-define-key "SPC f f" 'find-file)
+  (general-define-key "SPC b b" 'switch-to-buffer)
+  (general-define-key "SPC g s" 'magit-status)
+  (general-define-key "<f4>" 'next-error)
 
   (use-package evil-nerd-commenter
     :config
-    (define-key evil-normal-state-map (kbd "SPC c l") 'evilnc-comment-or-uncomment-lines)
+    (general-define-key "SPC c l" 'evilnc-comment-or-uncomment-lines)
     (define-key evil-visual-state-map (kbd "SPC c l") 'evilnc-comment-or-uncomment-lines))
   )
