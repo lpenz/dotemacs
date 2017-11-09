@@ -15,4 +15,8 @@
     :config
     (general-define-key "SPC c l" 'evilnc-comment-or-uncomment-lines)
     (define-key evil-visual-state-map (kbd "SPC c l") 'evilnc-comment-or-uncomment-lines))
+
+  (use-package evil-visualstar
+    :config
+    (global-evil-visualstar-mode))
   )
