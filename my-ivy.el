@@ -21,6 +21,8 @@
   (general-define-key :keymaps 'evil-normal-state-map "SPC r" 'ivy-resume)
   )
 
+(use-package ivy-hydra)
+
 (use-package counsel
   :config
   (general-define-key "SPC s" 'counsel-rg)
