@@ -22,11 +22,9 @@
 
 ;; Settings: ;;;;;;
 
-;; No startup message
-(setq inhibit-startup-message t)
-
-;; Avoid screen flicker due to visual bell
-(setq visible-bell nil)
+(setq-default indent-tabs-mode nil) ;; Indent with spaces
+(setq inhibit-startup-message t) ;; No startup message
+(setq visible-bell nil) ;; Avoid screen flicker due to visual bell
 
 ;; my-afterinit.el overrides whatever a rogue package may have done
 (add-hook 'after-init-hook '(lambda () (load "~/.emacs.d/my-afterinit.el")))
