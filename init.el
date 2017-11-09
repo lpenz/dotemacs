@@ -15,7 +15,7 @@
 (load "~/.emacs.d/my-flycheck.el")
 (load "~/.emacs.d/my-winum.el")
 
-;; languages
+;; Languages
 (use-package rust-mode)
 (use-package yaml-mode)
 (use-package markdown-mode)
@@ -28,7 +28,11 @@
 ;; my-afterinit.el overrides whatever a rogue package may have done
 (add-hook 'after-init-hook '(lambda () (load "~/.emacs.d/my-afterinit.el")))
 
-;; customizations go to another file, not to this one
+;; Local configurations
+(if (file-exists-p "~/.emacs-local.el")
+    (load "~/.emacs-local.el"))
+
+;; Customizations go to another file, not to this one
 (setq custom-file "~/.emacs-custom.el")
 (write-region "" nil custom-file)
 (load custom-file)
