@@ -22,6 +22,9 @@
 
 ;; Settings: ;;;;;;
 
+;; No startup message
+(setq inhibit-startup-message t)
+
 ;; Avoid screen flicker due to visual bell
 (setq visible-bell nil)
 
