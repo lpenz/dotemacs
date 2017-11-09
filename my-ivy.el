@@ -18,7 +18,7 @@
   (setq ivy-re-builders-alist
 	;; allow input not in order
 	'((t   . ivy--regex-ignore-order)))
-  (define-key evil-normal-state-map (kbd "SPC r") 'ivy-resume)
+  (general-define-key :keymaps 'evil-normal-state-map "SPC r" 'ivy-resume)
   )
 
 (use-package counsel
