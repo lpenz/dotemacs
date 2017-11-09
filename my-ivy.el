@@ -30,3 +30,9 @@
   (general-define-key "SPC m" 'counsel-bookmark)
   (general-define-key "SPC z" 'counsel-fzf)
   )
+
+(use-package counsel-gtags
+  :config
+  (general-define-key "SPC t d" 'counsel-gtags-find-definition)
+  (general-define-key "SPC t g" 'counsel-gtags-find-symbol)
+  )
