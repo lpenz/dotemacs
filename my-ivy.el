@@ -25,7 +25,6 @@
 
 (use-package counsel
   :config
-  (general-define-key "SPC s" 'counsel-rg)
   (general-define-key "SPC f f" 'counsel-find-file)
   (general-define-key "SPC m" 'counsel-bookmark)
   (general-define-key "SPC z" 'counsel-fzf)
@@ -35,4 +34,9 @@
   :config
   (general-define-key "SPC t d" 'counsel-gtags-find-definition)
   (general-define-key "SPC t g" 'counsel-gtags-find-symbol)
+  )
+
+(use-package counsel-projectile
+  :config
+  (general-define-key "SPC s" 'counsel-projectile-rg)
   )
