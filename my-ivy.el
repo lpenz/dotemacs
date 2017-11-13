@@ -33,7 +33,7 @@
 (use-package counsel-gtags
   :config
   (general-define-key "SPC t d" 'counsel-gtags-find-definition)
-  (general-define-key "SPC t g" 'counsel-gtags-find-symbol)
+  (general-define-key "SPC t g" 'counsel-gtags-find-reference)
   )
 
 (use-package counsel-projectile
