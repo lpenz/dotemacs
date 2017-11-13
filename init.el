@@ -25,6 +25,7 @@
 
 (setq-default indent-tabs-mode nil) ;; Indent with spaces
 (setq inhibit-startup-message t) ;; No startup message
+(setq scroll-step 1) ;; smooth scrolling
 (setq visible-bell nil) ;; Avoid screen flicker due to visual bell
 
 ;; my-afterinit.el overrides whatever a rogue package may have done
