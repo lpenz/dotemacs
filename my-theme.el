@@ -2,4 +2,6 @@
 
 (use-package spacemacs-theme
   :defer t
-  :init (load-theme 'spacemacs-dark t))
+  :init
+  (setq spacemacs-theme-custom-colors '((green-bg-s . "#00ff00")))
+  (load-theme 'spacemacs-dark t))
