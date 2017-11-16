@@ -8,6 +8,7 @@
 (load "~/.emacs.d/my-evil.el")
 (use-package magit)
 (use-package evil-magit)
+(use-package git-gutter :config (global-git-gutter-mode +1))
 (use-package fill-column-indicator)
 (load "~/.emacs.d/my-whichkey.el")
 (load "~/.emacs.d/my-ivy.el")
