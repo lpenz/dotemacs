@@ -18,7 +18,8 @@
   (setq ivy-re-builders-alist
 	;; allow input not in order
 	'((t   . ivy--regex-ignore-order)))
-  (general-define-key :keymaps 'evil-normal-state-map "SPC r" 'ivy-resume)
+  (general-define-key "SPC r" 'ivy-resume)
+  (general-define-key "SPC w" 'swiper)
   )
 
 (use-package ivy-hydra)
