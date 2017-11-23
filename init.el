@@ -19,6 +19,7 @@
 
 ;; Languages
 (use-package rust-mode)
+(use-package haskell-mode)
 (use-package yaml-mode)
 (use-package markdown-mode)
 (add-to-list 'auto-mode-alist '("\\.m" . octave-mode))
