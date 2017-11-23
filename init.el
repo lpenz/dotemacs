@@ -22,6 +22,7 @@
 (use-package haskell-mode)
 (use-package yaml-mode)
 (use-package markdown-mode)
+(use-package graphviz-dot-mode)
 (add-to-list 'auto-mode-alist '("\\.m" . octave-mode))
 
 ;; Settings: ;;;;;;
