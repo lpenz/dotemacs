@@ -31,6 +31,7 @@
 (setq inhibit-startup-message t) ;; No startup message
 (setq scroll-step 1) ;; smooth scrolling
 (setq visible-bell nil) ;; Avoid screen flicker due to visual bell
+(setq ediff-split-window-function 'split-window-horizontally)
 
 ;; my-afterinit.el overrides whatever a rogue package may have done
 (add-hook 'after-init-hook '(lambda () (load "~/.emacs.d/my-afterinit.el")))
