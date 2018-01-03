@@ -23,6 +23,9 @@
 (use-package yaml-mode)
 (use-package markdown-mode)
 (use-package graphviz-dot-mode)
+(use-package py-yapf)
+(use-package go-mode)
+(use-package dockerfile-mode)
 (add-to-list 'auto-mode-alist '("\\.m" . octave-mode))
 
 ;; Settings: ;;;;;;
