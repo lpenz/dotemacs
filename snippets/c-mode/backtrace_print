@@ -1,0 +1,19 @@
+# -*- mode: snippet -*-
+# name: backtrace_print
+# key: backtrace_print
+# --
+#define backtrace_print(func) do { \
+        static int calls = 0; \
+        size_t size = 10; \
+        void *array[size]; \
+        char **strings; \
+        size_t i; \
+        size = backtrace (array, size); \
+        strings = backtrace_symbols (array, size); \
+        for (i = 0; i < size; i++) \
+            func("<lp> call %d stack %d/%d: %s", calls, i, size-1, strings[i]); \
+        free (strings); \
+        calls++; \
+    } while(0)
+
+

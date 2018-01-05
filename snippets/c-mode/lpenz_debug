@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: lpenz_debug
+# key: lpenz_debug
+# --
+#define lpenz_debug(x...) do { \
+        FILE *_lpenz_debug_f = fopen("/tmp/lpenz_debug.txt", "a"); \
+        fprintf(_lpenz_debug_f, "%s@%d: ", __PRETTY_FUNCTION__, __LINE__); \
+        fprintf(_lpenz_debug_f, ##x); \
+        fprintf(_lpenz_debug_f, "\n"); \
+        fclose(_lpenz_debug_f); \
+        } while(0)

@@ -10,6 +10,7 @@
 (use-package evil-magit)
 (use-package git-gutter :config (global-git-gutter-mode +1))
 (use-package fill-column-indicator)
+(use-package yasnippet :config (yas-global-mode 1))
 (load "~/.emacs.d/my-whichkey.el")
 (load "~/.emacs.d/my-ivy.el")
 (load "~/.emacs.d/my-autosave.el")
