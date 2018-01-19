@@ -18,6 +18,7 @@
 (load "~/.emacs.d/my-flycheck.el")
 (load "~/.emacs.d/my-ggtags.el")
 (load "~/.emacs.d/my-winum.el")
+(use-package flycheck-mypy)
 
 ;; Languages
 (use-package rust-mode)
