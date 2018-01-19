@@ -35,6 +35,9 @@
   :config
   (general-define-key "SPC t d" 'counsel-gtags-find-definition)
   (general-define-key "SPC t g" 'counsel-gtags-find-reference)
+  (general-define-key "SPC t f" 'counsel-gtags-find-file)
+  (general-define-key "SPC t ]" 'counsel-gtags-dwim)
+  (general-define-key "SPC ]" 'counsel-gtags-dwim)
   )
 
 (use-package counsel-projectile
