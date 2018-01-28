@@ -29,6 +29,7 @@
 (use-package py-yapf)
 (use-package go-mode)
 (use-package dockerfile-mode)
+(use-package clojure-mode)
 (add-to-list 'auto-mode-alist '("\\.m" . octave-mode))
 
 ;; Settings: ;;;;;;
