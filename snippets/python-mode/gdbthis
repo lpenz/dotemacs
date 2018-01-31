@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: gdbthis
+# key: gdbthis
+# --
+def gdbthis():
+   import subprocess
+   gdbcmd = [
+      'tmux','split-window','-h',
+      'sudo','gdb',
+      '-p',str(os.getpid()),
+      # '-ex','break function',
+      '-ex','continue',
+   ]
+   subprocess.call(gdbcmd)
