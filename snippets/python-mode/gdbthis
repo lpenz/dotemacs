@@ -3,7 +3,7 @@
 # key: gdbthis
 # --
 def gdbthis():
-   import subprocess
+   import subprocess, os
    gdbcmd = [
       'tmux','split-window','-h',
       'sudo','gdb',
