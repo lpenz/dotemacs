@@ -1,14 +1,17 @@
 # -*- mode: snippet -*-
 # name: gdbthis
 # key: gdbthis
+# expand-env: ((yas-indent-line 'fixed))
 # --
-def gdbthis():
-   import subprocess, os
-   gdbcmd = [
-      'tmux','split-window','-h',
-      'sudo','gdb',
-      '-p',str(os.getpid()),
-      # '-ex','break function',
-      '-ex','continue',
-   ]
-   subprocess.call(gdbcmd)
+def gdbthis(breaks):
+    import subprocess, os
+    import os
+    gdbcmd = [
+        'tmux', 'split-window', '-h',
+        'sudo', 'gdb',
+        '-p', str(os.getpid()),
+    ]
+    for b in breaks:
+        gdbcmd.extend(['-ex', 'break ' + b])
+    gdbcmd.extend(['-ex', 'continue'])
+    subprocess.call(gdbcmd)
