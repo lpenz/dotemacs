@@ -14,6 +14,12 @@
   (general-define-key "SPC g s" 'magit-status)
   (general-define-key "<f4>" 'next-error)
 
+  ;; Unbind some keys that misbehave when latency is high
+  (global-set-key (kbd "M-k") nil)
+  (global-set-key (kbd "M-j") nil)
+  (global-set-key (kbd "M-h") nil)
+  (global-set-key (kbd "M-l") nil)
+
   (use-package evil-nerd-commenter
     :config
     (general-define-key "SPC c l" 'evilnc-comment-or-uncomment-lines)
