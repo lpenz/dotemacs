@@ -3,7 +3,7 @@
 # key: gdbthis
 # expand-env: ((yas-indent-line 'fixed))
 # --
-def gdbthis(breaks):
+def gdbthis(breaks=[]):
     import subprocess, os
     import os
     gdbcmd = [
