@@ -1,6 +1,8 @@
 ;; my-evil.el
 
 (use-package evil
+  :init
+  (setq evil-want-integration nil)
   :config
   (evil-mode 1)
   (general-define-key "<f2>" 'save-buffer)
@@ -28,4 +30,11 @@
   (use-package evil-visualstar
     :config
     (global-evil-visualstar-mode))
+  )
+
+(use-package evil-collection
+  :after evil
+  :config
+  (setq evil-collection-mode-list '(realgud))
+  (evil-collection-init)
   )
