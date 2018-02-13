@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: pprint
+# key: pprint
+# --
+import pprint; pprint.PrettyPrinter(indent=4).pprint($1)
