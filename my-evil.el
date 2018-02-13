@@ -14,6 +14,7 @@
   ;; (general-define-key "SPC f f" 'find-file)
   (general-define-key "SPC b b" 'switch-to-buffer)
   (general-define-key "SPC g s" 'magit-status)
+  (general-define-key "SPC SPC" 'execute-extended-command)
   (general-define-key "<f4>" 'next-error)
 
   ;; Unbind some keys that misbehave when latency is high
