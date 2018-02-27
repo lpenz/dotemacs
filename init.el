@@ -31,6 +31,7 @@
 (use-package go-mode)
 (use-package dockerfile-mode)
 (use-package clojure-mode)
+(use-package clang-format)
 (add-to-list 'auto-mode-alist '("\\.m" . octave-mode))
 
 ;; Settings: ;;;;;;
