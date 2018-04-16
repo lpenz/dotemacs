@@ -3,15 +3,17 @@
 # key: gdbthis
 # expand-env: ((yas-indent-line 'fixed))
 # --
-def gdbthis(breaks=[]):
-    import subprocess, os
+def gdbthis(breaks=None, pid=None, sudo=False):
+    import subprocess
     import os
-    gdbcmd = [
-        'tmux', 'split-window', '-h',
-        'sudo', 'gdb',
-        '-p', str(os.getpid()),
-    ]
-    for b in breaks:
-        gdbcmd.extend(['-ex', 'break ' + b])
+    if pid is None:
+        pid = str(os.getpid())
+    gdbcmd = ['tmux', 'split-window', '-h']
+    if sudo:
+        gdbcmd.append('sudo')
+    gdbcmd.extend(['gdb', '-p', pid])
+    if breaks:
+        for brk in breaks:
+            gdbcmd.extend(['-ex', 'break ' + brk])
     gdbcmd.extend(['-ex', 'continue'])
     subprocess.call(gdbcmd)
