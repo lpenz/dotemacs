@@ -15,7 +15,6 @@
 (load "~/.emacs.d/my-whichkey.el")
 (load "~/.emacs.d/my-ivy.el")
 (load "~/.emacs.d/my-autosave.el")
-(load "~/.emacs.d/my-projectile.el")
 (load "~/.emacs.d/my-flycheck.el")
 (load "~/.emacs.d/my-ggtags.el")
 (load "~/.emacs.d/my-winum.el")

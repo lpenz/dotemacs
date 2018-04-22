@@ -42,5 +42,15 @@
 
 (use-package counsel-projectile
   :config
+  (use-package projectile
+    :config
+    (setq projectile-completion-system 'ivy)
+    (general-define-key "SPC a" 'projectile-find-other-file)
+    (general-define-key "<f10>" 'projectile-compile-project)
+    (general-define-key "SPC '" 'projectile-run-eshell)
+    )
+  (counsel-projectile-mode)
+  (general-define-key "SPC p l" 'counsel-projectile-switch-project)
+  (general-define-key "SPC p f" 'counsel-projectile)
   (general-define-key "SPC s" 'counsel-projectile-rg)
   )
