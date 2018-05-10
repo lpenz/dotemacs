@@ -26,6 +26,7 @@
 
 (use-package counsel
   :config
+  (counsel-mode)
   (general-define-key "SPC f f" 'counsel-find-file)
   (general-define-key "SPC m" 'counsel-bookmark)
   (general-define-key "SPC z" 'counsel-fzf)
