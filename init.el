@@ -19,6 +19,7 @@
 (load "~/.emacs.d/my-ggtags.el")
 (load "~/.emacs.d/my-winum.el")
 (load "~/.emacs.d/my-compilation.el")
+(load "~/.emacs.d/counsel-lor.el")
 (use-package flycheck-mypy)
 
 ;; Languages
