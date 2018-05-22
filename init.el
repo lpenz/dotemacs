@@ -1,3 +1,6 @@
+(setq gc-cons-threshold 100000000)
+
+(let ((file-name-handler-alist nil))
 
 ;; (package-initialize) ; done in use-package initialization
 
@@ -56,3 +59,4 @@
 (setq custom-file "~/.emacs-custom.el")
 (write-region "" nil custom-file)
 (load custom-file)
+)
