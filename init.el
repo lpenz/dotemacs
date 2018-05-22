@@ -22,8 +22,8 @@
 (load "~/.emacs.d/my-ggtags.el")
 (load "~/.emacs.d/my-winum.el")
 (load "~/.emacs.d/my-compilation.el")
-(load "~/.emacs.d/counsel-lor.el")
-(general-define-key "SPC e" 'counsel-lor)
+(load "~/.emacs.d/counselor.el")
+(general-define-key "SPC e" 'counselor-projectile-sh)
 (use-package flycheck-mypy)
 
 ;; Languages
