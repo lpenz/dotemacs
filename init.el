@@ -28,8 +28,8 @@
   (load "~/.emacs.d/my-ggtags.el")
   (load "~/.emacs.d/my-winum.el")
   (load "~/.emacs.d/my-compilation.el")
-  (load "~/.emacs.d/counselor.el")
-  (general-define-key "SPC e" 'counselor-projectile-sh)
+  (load "~/.emacs.d/counshell.el")
+  (general-define-key "SPC e" 'counshell-projectile-sh)
   (use-package flycheck-mypy)
 
   ;; Languages
