@@ -7,11 +7,11 @@ def gdbthis(breaks=None, pid=None, sudo=False):
     import subprocess
     import os
     if pid is None:
-        pid = str(os.getpid())
+        pid = os.getpid()
     gdbcmd = ['tmux', 'split-window', '-h']
     if sudo:
         gdbcmd.append('sudo')
-    gdbcmd.extend(['gdb', '-p', pid])
+    gdbcmd.extend(['gdb', '-p', str(pid)])
     if breaks:
         for brk in breaks:
             gdbcmd.extend(['-ex', 'break ' + brk])
