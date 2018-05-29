@@ -12,3 +12,7 @@
   (package-install 'use-package))
 (setq use-package-always-ensure t)
 
+(setq quelpa-checkout-melpa-p nil) ;; we are using it for counshell only
+(use-package quelpa)
+(use-package quelpa-use-package)
+
