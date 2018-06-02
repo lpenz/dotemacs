@@ -37,6 +37,7 @@
   (use-package graphviz-dot-mode)
   (use-package py-yapf)
   (use-package go-mode)
+  (add-hook 'before-save-hook 'gofmt-before-save)
   (use-package dockerfile-mode)
   (use-package clojure-mode)
   (use-package clang-format)
