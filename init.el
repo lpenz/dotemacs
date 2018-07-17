@@ -63,4 +63,6 @@
   (setq custom-file "~/.emacs-custom.el")
   (write-region "" nil custom-file)
   (load custom-file)
+
+  (kill-buffer "*scratch*")
   )
