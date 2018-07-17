@@ -18,6 +18,13 @@
   (setq ivy-re-builders-alist
 	;; allow input not in order
 	'((t   . ivy--regex-ignore-order)))
+  (define-key
+    ivy-switch-buffer-map
+    (kbd "C-q")
+    (lambda ()
+      (interactive)
+      (ivy-set-action 'kill-buffer)
+      (ivy-done)))
   (general-define-key "SPC r" 'ivy-resume)
   (general-define-key "SPC w" 'swiper)
   )
