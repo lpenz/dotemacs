@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: lpenz_debug
+# key: lpenz_debug
+# expand-env: ((yas-indent-line 'fixed))
+# --
+def lpenz_debug(*args, **kwargs):
+    with(open('/tmp/lpenz_debug.txt', 'a')) as fd:
+        fd.write(str(*args))
+        fd.write('\n')
+
