@@ -2,7 +2,8 @@
 
 (use-package evil
   :init
-  (setq evil-want-integration nil)
+  (setq evil-want-integration t)
+  (setq evil-want-keybinding nil)
   :config
   (evil-mode 1)
   (general-define-key "<f2>" 'save-buffer)
