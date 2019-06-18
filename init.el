@@ -41,6 +41,8 @@
   (use-package dockerfile-mode)
   (use-package clojure-mode)
   (use-package rjsx-mode)
+  (use-package jinja2-mode)
+  (use-package nix-mode)
   (use-package clang-format)
   (add-to-list 'auto-mode-alist '("\\.m" . octave-mode))
   (add-to-list 'auto-mode-alist '("SConstruct" . python-mode))
