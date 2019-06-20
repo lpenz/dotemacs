@@ -37,6 +37,6 @@
 (use-package evil-collection
   :after evil
   :config
-  (setq evil-collection-mode-list '(realgud))
+  (setq evil-collection-mode-list '(realgud compile))
   (evil-collection-init)
   )
