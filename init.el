@@ -43,6 +43,8 @@
   (use-package py-yapf)
   (use-package rjsx-mode)
   (use-package rust-mode)
+  (use-package plantuml-mode)
+  (use-package flycheck-plantuml)
   (use-package yaml-mode)
   (add-hook 'before-save-hook 'gofmt-before-save)
   (add-to-list 'auto-mode-alist '("\\.m" . octave-mode))
