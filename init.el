@@ -6,6 +6,8 @@
 
 (let ((file-name-handler-alist nil))
 
+  (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+
   ;; (package-initialize) ; done in use-package initialization
 
   ;; Load files with individual packages and corresponding configs:
