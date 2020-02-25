@@ -26,7 +26,7 @@
       (ivy-set-action 'kill-buffer)
       (ivy-done)))
   (general-define-key "SPC r" 'ivy-resume)
-  (general-define-key "SPC w" 'swiper)
+  (general-define-key "SPC w" 'swiper-isearch)
   )
 
 (use-package ivy-hydra)
