@@ -27,6 +27,8 @@
       (ivy-done)))
   (general-define-key "SPC r" 'ivy-resume)
   (general-define-key "SPC w" 'swiper-isearch)
+  (general-define-key "/" 'swiper-isearch)
+  (general-define-key "*" 'swiper-isearch-thing-at-point)
   )
 
 (use-package ivy-hydra)
