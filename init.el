@@ -61,6 +61,7 @@
   (setq visible-bell nil) ;; Avoid screen flicker due to visual bell
   (setq c-basic-offset 4)
   (setq ediff-split-window-function 'split-window-horizontally)
+  (load "~/.emacs.d/my-keys.el")
 
   ;; my-afterinit.el overrides whatever a rogue package may have done
   (add-hook 'after-init-hook '(lambda () (load "~/.emacs.d/my-afterinit.el")))
