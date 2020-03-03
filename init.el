@@ -28,6 +28,7 @@
   (load "~/.emacs.d/my-winum.el")
   (load "~/.emacs.d/my-compilation.el")
   (load "~/.emacs.d/my-counshell.el")
+  (load "~/.emacs.d/my-eshell.el")
   (use-package flycheck-mypy)
   (use-package package-lint)
 
