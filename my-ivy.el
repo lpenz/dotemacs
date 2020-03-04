@@ -60,7 +60,6 @@
     (general-define-key "SPC '" 'projectile-run-eshell)
     )
   (counsel-projectile-mode)
-  (general-define-key "SPC p l" 'counsel-projectile-switch-project)
-  (general-define-key "SPC p f" 'counsel-projectile)
+  (general-define-key "SPC p" 'counsel-yank-pop)
   (general-define-key "SPC s" 'counsel-projectile-rg)
   )
