@@ -1,6 +1,7 @@
 ;; my-ivy.el
 
 (use-package ivy
+  :after (evil)
   ;; :bind
   ;; (:map ivy-mode-map
   ;; 	("C-'" . ivy-avy))
@@ -29,6 +30,7 @@
   (general-define-key "SPC w" 'swiper-isearch)
   (general-define-key "/" 'swiper-isearch)
   (general-define-key "*" 'swiper-isearch-thing-at-point)
+  (general-define-key :keymaps 'evil-visual-state-map "*" 'swiper-isearch-thing-at-point)
   )
 
 (use-package ivy-hydra)
