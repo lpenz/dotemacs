@@ -46,8 +46,10 @@
   (use-package nix-mode)
   (use-package py-yapf)
   (use-package rjsx-mode)
-  (use-package rust-mode)
-  (add-hook 'rust-mode-hook '(setq rust-match-angle-brackets nil))
+  (use-package rust-mode
+    :config
+    (setq rust-match-angle-brackets nil)
+    (setq rust-format-on-save t))
   (use-package plantuml-mode)
   (use-package flycheck-plantuml)
   (use-package yaml-mode)
