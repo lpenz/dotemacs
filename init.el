@@ -54,7 +54,7 @@
   (use-package flycheck-plantuml)
   (use-package yaml-mode)
   (add-hook 'before-save-hook 'gofmt-before-save)
-  (add-to-list 'auto-mode-alist '("\\.m" . octave-mode))
+  (add-to-list 'auto-mode-alist '("\\.m$" . octave-mode))
   (add-to-list 'auto-mode-alist '("SConstruct" . python-mode))
   (add-to-list 'auto-mode-alist '("SConscript" . python-mode))
 
