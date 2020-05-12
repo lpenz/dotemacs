@@ -57,6 +57,7 @@
   (add-to-list 'auto-mode-alist '("\\.m$" . octave-mode))
   (add-to-list 'auto-mode-alist '("SConstruct" . python-mode))
   (add-to-list 'auto-mode-alist '("SConscript" . python-mode))
+  (add-to-list 'auto-mode-alist '("valgrind.*\\.supp$" . conf-mode))
 
   ;; Settings: ;;;;;;
 
