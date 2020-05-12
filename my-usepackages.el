@@ -10,6 +10,7 @@
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
+(require 'use-package)
 (setq use-package-always-ensure t)
 
 (setq quelpa-checkout-melpa-p nil) ;; we are using it for counshell only
