@@ -32,6 +32,7 @@
   (load "~/.emacs.d/my-eshell.el")
   (use-package flycheck-mypy)
   (use-package package-lint)
+  (load "~/.emacs.d/my-company.el")
 
   ;; Languages
   (load "~/.emacs.d/my-lang-cpp.el")
