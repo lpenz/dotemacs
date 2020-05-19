@@ -28,7 +28,7 @@
       (ivy-done)))
   (general-define-key "SPC r" 'ivy-resume)
   (general-define-key "SPC w" 'swiper-isearch)
-  (general-define-key "/" 'swiper-isearch)
+  (general-define-key "SPC /" 'swiper-isearch)
   (general-define-key "*" 'swiper-isearch-thing-at-point)
   (general-define-key :keymaps 'evil-visual-state-map "*" 'swiper-isearch-thing-at-point)
   )
