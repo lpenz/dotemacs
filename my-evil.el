@@ -35,6 +35,4 @@
   :config
   (setq evil-collection-mode-list '(realgud compile company))
   (evil-collection-init)
-  (general-define-key :keymaps 'evil-insert-state-map "C-n" 'company-complete)
-  (general-define-key :keymaps 'evil-insert-state-map "C-p" 'company-complete)
   )
