@@ -42,6 +42,7 @@
   (use-package go-mode)
   (use-package graphviz-dot-mode)
   (use-package haskell-mode)
+  (use-package ninja-mode)
   (use-package jinja2-mode)
   (use-package markdown-mode)
   (use-package nix-mode)
