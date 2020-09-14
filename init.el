@@ -46,6 +46,7 @@
   (use-package jinja2-mode)
   (use-package markdown-mode)
   (use-package nix-mode)
+  (use-package nixpkgs-fmt)
   (use-package py-yapf)
   (use-package rjsx-mode)
   (use-package rust-mode
