@@ -33,7 +33,7 @@
 (use-package evil-collection
   :after evil company
   :config
-  (setq evil-collection-mode-list '(compile company))
+  (setq evil-collection-mode-list '(compile company magit))
   (general-def 'insert 'override "C-n" 'company-dabbrev)
   (general-def 'insert 'override "C-p" 'company-dabbrev)
   (evil-collection-init)
