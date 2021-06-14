@@ -1,8 +1,9 @@
-[![Build Status](https://travis-ci.com/lpenz/dotemacs.svg?branch=master)](https://travis-ci.com/lpenz/dotemacs)
+[![CI](https://github.com/lpenz/dotemacs/actions/workflows/ci.yml/badge.svg)](https://github.com/lpenz/dotemacs/actions/workflows/ci.yml)
 
 # dotemacs
 
-My ~/.emacs.d directory
+My ~/.emacs.d directory, using github actions to do a minimal CI job.
+
 
 ## Install instructions
 

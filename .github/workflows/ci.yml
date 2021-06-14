@@ -1,0 +1,25 @@
+---
+name: CI
+on: [ push, pull_request ]
+jobs:
+  omnilint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: docker://lpenz/omnilint:v0.2
+  lint:
+    strategy:
+      matrix:
+        emacs_version:
+          - 25.3
+          - 26.3
+          - 27.1
+          - snapshot
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: purcell/setup-emacs@v3.0
+        with:
+          version: ${{ matrix.emacs_version }}
+      - name: Load the config
+        run: ./test-startup.sh

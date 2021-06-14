@@ -2,5 +2,13 @@
 - hosts: all
   tasks:
     # - apt: package=emacs state=present
-    - git: repo="https://github.com/lpenz/dotemacs.git" dest="{{lookup('env','HOME')}}/.emacs.d"
-    - shell: emacs -nw --eval '(kill-emacs)' < /dev/tty
+    - name: clone dotemacs
+      git:
+        repo: "https://github.com/lpenz/dotemacs.git"
+        dest: "{{ lookup('env','HOME') }}/.emacs.d"
+        version: main
+      notify: install-packages
+  handlers:
+    - name: install-packages
+      shell: emacs -nw --eval '(kill-emacs)' < /dev/tty
+      when: result.changed
