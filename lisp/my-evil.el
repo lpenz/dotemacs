@@ -38,3 +38,6 @@
   (general-def 'insert 'override "C-p" 'company-dabbrev)
   (evil-collection-init)
   )
+
+(provide 'my-evil)
+

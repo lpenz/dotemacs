@@ -8,3 +8,6 @@
    :keymaps 'ggtags-mode-map
    :states '(normal)
    "SPC g g" 'helm-gtags-dwim))
+
+(provide 'my-ggtags)
+

@@ -6,3 +6,6 @@
 (general-define-key "SPC h c"  'unhighlight-regexp)
 
 (general-define-key "SPC a"  'ff-find-other-file)
+
+(provide 'my-keys)
+

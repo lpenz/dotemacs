@@ -7,3 +7,5 @@
 (ivy-mode 1)
 (setq magit-completing-read-function 'ivy-completing-read)
 
+(provide 'my-afterinit)
+

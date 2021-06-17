@@ -13,3 +13,6 @@
 		  helm-apropos-fuzzy-match t
 	          helm-completion-in-region-fuzzy-match t)
 	    (helm-mode 1)))
+
+(provide 'my-helm)
+

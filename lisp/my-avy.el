@@ -7,3 +7,5 @@
   (general-define-key :keymaps 'swiper-map "M-'" 'swiper-avy)
   )
 
+(provide 'my-avy)
+

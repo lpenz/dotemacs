@@ -7,3 +7,6 @@
   (load-theme 'spacemacs-dark t))
 
 (set-frame-font "InconsolataForPowerline Nerd Font:pixelsize=18")
+
+(provide 'my-theme)
+

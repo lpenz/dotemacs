@@ -21,3 +21,6 @@
             (evil-window-move-very-bottom)
             (evil-goto-line)))))))
 (add-hook 'compilation-mode-hook 'my-compilation-hook)
+
+(provide 'my-compilation)
+

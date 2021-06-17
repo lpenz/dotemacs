@@ -65,3 +65,6 @@
   (general-define-key "SPC p" 'counsel-yank-pop)
   (general-define-key "SPC s" 'counsel-projectile-rg)
   )
+
+(provide 'my-ivy)
+

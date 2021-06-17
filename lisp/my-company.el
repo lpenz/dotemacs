@@ -17,3 +17,6 @@
   (general-def company-active-map "RET" 'company-complete-selection)
   ;; Other bindings in my-evil.el in :config of evil-collection
   )
+
+(provide 'my-company)
+

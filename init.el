@@ -1,3 +1,7 @@
+;; Based on https://github.com/purcell/emacs.d
+
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+
 (setq gc-cons-threshold 100000000)
 (run-with-idle-timer
  5 nil
@@ -11,31 +15,31 @@
   ;; (package-initialize) ; done in use-package initialization
 
   ;; Load files with individual packages and corresponding configs:
-  (load "~/.emacs.d/my-usepackages.el")
-  (load "~/.emacs.d/my-theme.el")
-  (load "~/.emacs.d/my-general.el")
-  (load "~/.emacs.d/my-evil.el")
-  (load "~/.emacs.d/my-magit.el")
+  (require 'my-usepackages)
+  (require 'my-theme)
+  (require 'my-general)
+  (require 'my-evil)
+  (require 'my-magit)
   (use-package git-gutter :config (global-git-gutter-mode +1))
   (use-package fill-column-indicator)
   (use-package yasnippet :config (yas-global-mode 1))
   ;; (use-package realgud)
-  (load "~/.emacs.d/my-whichkey.el")
-  (load "~/.emacs.d/my-ivy.el")
-  (load "~/.emacs.d/my-avy.el")
-  (load "~/.emacs.d/my-autosave.el")
-  (load "~/.emacs.d/my-flycheck.el")
-  (load "~/.emacs.d/my-ggtags.el")
-  (load "~/.emacs.d/my-winum.el")
-  (load "~/.emacs.d/my-compilation.el")
-  (load "~/.emacs.d/my-counshell.el")
-  (load "~/.emacs.d/my-eshell.el")
+  (require 'my-whichkey)
+  (require 'my-ivy)
+  (require 'my-avy)
+  (require 'my-autosave)
+  (require 'my-flycheck)
+  (require 'my-ggtags)
+  (require 'my-winum)
+  (require 'my-compilation)
+  (require 'my-counshell)
+  (require 'my-eshell)
   (use-package flycheck-mypy)
   (use-package package-lint)
-  (load "~/.emacs.d/my-company.el")
+  (require 'my-company)
 
   ;; Languages
-  (load "~/.emacs.d/my-lang-cpp.el")
+  (require 'my-lang-cpp)
   (use-package clojure-mode)
   (use-package cmake-mode)
   (use-package dockerfile-mode)
@@ -71,10 +75,10 @@
   (setq visible-bell nil) ;; Avoid screen flicker due to visual bell
   (setq c-basic-offset 4)
   (setq ediff-split-window-function 'split-window-horizontally)
-  (load "~/.emacs.d/my-keys.el")
+  (require 'my-keys)
 
   ;; my-afterinit.el overrides whatever a rogue package may have done
-  (add-hook 'after-init-hook '(lambda () (load "~/.emacs.d/my-afterinit.el")))
+  (add-hook 'after-init-hook '(lambda () (require 'my-afterinit)))
 
   ;; Local configurations
   (if (file-exists-p "~/.emacs-local.el")

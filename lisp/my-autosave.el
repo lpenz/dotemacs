@@ -6,3 +6,5 @@
 (setq version-control 'never)
 (setq make-backup-files nil)
 
+(provide 'my-autosave)
+

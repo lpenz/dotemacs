@@ -17,3 +17,5 @@
 (use-package quelpa)
 (use-package quelpa-use-package)
 
+(provide 'my-usepackages)
+

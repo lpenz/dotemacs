@@ -11,3 +11,6 @@
   (general-define-key "M-5" 'winum-select-window-5)
   (general-define-key "M-6" 'winum-select-window-6)
   )
+
+(provide 'my-winum)
+

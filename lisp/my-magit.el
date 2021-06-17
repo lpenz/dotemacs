@@ -8,3 +8,7 @@
   (add-to-list 'magit-section-initial-visibility-alist '(unpushed . show))
   (add-to-list 'magit-section-initial-visibility-alist '(recent . show)))
 
+(provide 'my-magit)
+
+(provide 'my-magit)
+
