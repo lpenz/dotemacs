@@ -41,6 +41,7 @@
   (general-define-key "SPC f f" 'counsel-find-file)
   (general-define-key "SPC m" 'counsel-bookmark)
   (general-define-key "SPC z" 'counsel-fzf)
+  (general-define-key :keymaps 'evil-insert-state-map "M-#" 'counsel-company)
   )
 
 (use-package counsel-gtags
