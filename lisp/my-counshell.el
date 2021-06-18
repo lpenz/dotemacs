@@ -1,6 +1,7 @@
 ;; my-counshell.el
 
 (use-package counshell
+  :after quelpa-use-package
   :quelpa ((counshell :fetcher github :repo "lpenz/counshell") :upgrade nil)
   ;; :quelpa ((counshell :fetcher file :path "/home/lpenz/projs/counshell/counshell.el") :upgrade t)
   :config
