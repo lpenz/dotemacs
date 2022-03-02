@@ -39,6 +39,7 @@
   (use-package flycheck-mypy)
   (use-package package-lint)
   (require 'my-company)
+  (use-package dumb-jump)
 
   ;; Languages
   (require 'my-lang-cpp)
