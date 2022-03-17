@@ -47,7 +47,9 @@
   (use-package cmake-mode)
   (use-package dockerfile-mode)
   (use-package go-mode)
-  (use-package graphviz-dot-mode)
+  (use-package graphviz-dot-mode
+    :config
+    (setq graphviz-dot-indent-width 4))
   (use-package haskell-mode)
   (use-package ninja-mode)
   (use-package jinja2-mode)
