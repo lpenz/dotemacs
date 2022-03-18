@@ -39,7 +39,9 @@
   (use-package flycheck-mypy)
   (use-package package-lint)
   (require 'my-company)
-  (use-package dumb-jump)
+  (use-package dumb-jump
+    :config
+    (add-hook 'xref-backend-functions #'dumb-jump-xref-activate))
 
   ;; Languages
   (require 'my-lang-cpp)
