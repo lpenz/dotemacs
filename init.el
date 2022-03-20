@@ -42,6 +42,7 @@
   (use-package dumb-jump
     :config
     (add-hook 'xref-backend-functions #'dumb-jump-xref-activate))
+  (use-package mood-line :config (mood-line-mode))
 
   ;; Languages
   (require 'my-lang-cpp)
