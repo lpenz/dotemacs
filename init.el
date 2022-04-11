@@ -86,7 +86,7 @@
   (require 'my-keys)
 
   ;; my-afterinit.el overrides whatever a rogue package may have done
-  (add-hook 'after-init-hook '(lambda () (require 'my-afterinit)))
+  (add-hook 'after-init-hook (lambda () (require 'my-afterinit)))
 
   ;; Local configurations
   (if (file-exists-p "~/.emacs-local.el")
