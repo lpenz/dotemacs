@@ -17,7 +17,6 @@
   ;; Load files with individual packages and corresponding configs:
   (require 'my-straight)
   (require 'my-usepackages)
-  (use-package undo-tree :init (global-undo-tree-mode))
   (require 'my-theme)
   (require 'my-general)
   (require 'my-evil)
