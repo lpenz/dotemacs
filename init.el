@@ -31,6 +31,7 @@
   (require 'my-autosave)
   (require 'my-flycheck)
   (require 'my-ggtags)
+  (require 'my-lsp)
   (require 'my-winum)
   (require 'my-compilation)
   (require 'my-counshell)
