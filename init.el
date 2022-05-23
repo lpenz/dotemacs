@@ -66,6 +66,10 @@
     :config
     (setq rust-match-angle-brackets nil)
     (setq rust-format-on-save t))
+  (use-package shfmt
+    :config
+    (add-hook 'sh-mode-hook 'shfmt-on-save-mode)
+    (setq shfmt-arguments '("-i" "4")))
   (use-package plantuml-mode)
   (use-package flycheck-plantuml)
   (use-package yaml-mode)
