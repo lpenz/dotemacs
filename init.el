@@ -73,7 +73,9 @@
   (use-package plantuml-mode)
   (use-package flycheck-plantuml)
   (use-package yaml-mode)
-  (use-package python-black)
+  (use-package python-black
+    :after python
+    :hook (python-mode . python-black-on-save-mode-enable-dwim))
   (add-hook 'before-save-hook 'gofmt-before-save)
   (add-to-list 'auto-mode-alist '("\\.m$" . octave-mode))
   (add-to-list 'auto-mode-alist '("SConstruct" . python-mode))
