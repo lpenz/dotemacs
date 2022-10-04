@@ -7,7 +7,9 @@
   :hook (
          (rust-mode . lsp)
          (lsp-mode . lsp-enable-which-key-integration))
-  :commands lsp)
+  :commands lsp
+  :config
+  (setq lsp-rust-server 'rust-analyzer))
 
 ;; extensions:
 
