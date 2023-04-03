@@ -1,15 +1,9 @@
 ;; ~/.emacs.d/my-lang-cpp.el
 
-(use-package clang-format
-  :config
-  (progn
-    (defun clang-format-buffer-smart ()
-      "Reformat buffer if .clang-format exists in the projectile root."
-      (when (file-exists-p (expand-file-name ".clang-format" (projectile-project-root)))
-        (clang-format-buffer)))
-    (defun clang-install-hook ()
-      (add-hook 'before-save-hook 'clang-format-buffer-smart nil t))
-    (add-hook 'c-mode-common-hook 'clang-install-hook)))
+(use-package clang-format)
+
+(straight-use-package
+ '(clang-format+ :type git :host github :repo "SavchenkoValeriy/emacs-clang-format-plus"))
 
 (use-package flycheck-clang-tidy
   :after flycheck
