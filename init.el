@@ -36,6 +36,7 @@
   (require 'my-compilation)
   (require 'my-counshell)
   (require 'my-eshell)
+  (require 'my-shell)
   (use-package flycheck-mypy)
   (use-package package-lint)
   (require 'my-company)
