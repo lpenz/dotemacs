@@ -5,6 +5,9 @@
 
 (use-package aweshell)
 
+(use-package esh-autosuggest
+  :hook (eshell-mode . esh-autosuggest-mode))
+
 (defun my-eshell-hook ()
   (general-define-key :keymaps 'eshell-mode-map "TAB" 'completion-at-point)
   (general-define-key :keymaps 'eshell-mode-map "M-r" 'counsel-esh-history)
