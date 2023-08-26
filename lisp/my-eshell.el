@@ -1,5 +1,10 @@
 ;; eshell hook
 
+(straight-use-package
+ '(aweshell :type git :host github :repo "manateelazycat/aweshell"))
+
+(use-package aweshell)
+
 (defun my-eshell-hook ()
   (general-define-key :keymaps 'eshell-mode-map "TAB" 'completion-at-point)
   (general-define-key :keymaps 'eshell-mode-map "M-r" 'counsel-esh-history)
