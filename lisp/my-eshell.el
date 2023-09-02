@@ -3,7 +3,9 @@
 (straight-use-package
  '(aweshell :type git :host github :repo "manateelazycat/aweshell"))
 
-(use-package aweshell)
+(use-package aweshell
+   :config
+   (general-define-key "SPC #" 'aweshell-switch-buffer))
 
 (use-package esh-autosuggest
   :hook (eshell-mode . esh-autosuggest-mode))

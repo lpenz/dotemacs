@@ -61,7 +61,6 @@
     (setq projectile-project-compilation-cmd "") ;; workaround for https://github.com/bbatsov/projectile/issues/1270
     (general-define-key "<f10>" 'projectile-compile-project)
     (general-define-key "SPC '" 'projectile-run-shell)
-    (general-define-key "SPC #" 'projectile-run-eshell)
     )
   (counsel-projectile-mode)
   (general-define-key "SPC p" 'counsel-yank-pop)
