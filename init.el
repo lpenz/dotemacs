@@ -49,6 +49,7 @@
   ;; Languages
   (require 'my-lang-cpp)
   (use-package clojure-mode)
+  (use-package lua-mode)
   (use-package cmake-mode)
   (use-package dockerfile-mode)
   (use-package go-mode)
