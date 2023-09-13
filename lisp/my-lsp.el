@@ -15,10 +15,6 @@
 
 ;; (use-package lsp-ui :commands lsp-ui-mode)
 
-(use-package lsp-ivy
-  :after lsp-mode ivy
-  :commands lsp-ivy-workspace-symbol)
-
 ;; (use-package lsp-treemacs
 ;;   :after lsp-mode
 ;;   :commands lsp-treemacs-errors-list)
