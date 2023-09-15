@@ -35,6 +35,12 @@
   (general-define-key :keymaps 'isearch-mode-map "M-m" 'consult-line-multi)
   )
 
+(use-package consult-flycheck
+  :after consult
+  :config
+  (general-define-key "SPC e y" 'consult-flycheck)
+  )
+
 ;; A few more useful configurations...
 (use-package emacs
   :init
