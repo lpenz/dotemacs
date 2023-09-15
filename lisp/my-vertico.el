@@ -3,6 +3,7 @@
 (use-package vertico
   :init
   (vertico-mode)
+  (setq vertico-count 20)
   )
 
 (use-package consult
