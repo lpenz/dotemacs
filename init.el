@@ -27,6 +27,7 @@
   ;; (use-package realgud)
   (require 'my-whichkey)
   (require 'my-vertico)
+  (require 'my-projectile)
   (require 'my-autosave)
   (require 'my-flycheck)
   (require 'my-ggtags)
