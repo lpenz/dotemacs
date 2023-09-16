@@ -1,4 +1,4 @@
-;; my-evil.el
+;; my-evil.el -*- lexical-binding: t; -*-
 
 (use-package evil
   :init
@@ -23,22 +23,20 @@
   (global-set-key (kbd "M-k") nil)
   (global-set-key (kbd "M-j") nil)
   (global-set-key (kbd "M-h") nil)
-  (global-set-key (kbd "M-l") nil)
+  (global-set-key (kbd "M-l") nil))
 
-  (use-package evil-nerd-commenter
-    :config
-    (general-define-key "SPC c l" 'evilnc-comment-or-uncomment-lines)
-    (define-key evil-visual-state-map (kbd "SPC c l") 'evilnc-comment-or-uncomment-lines))
-  )
+(use-package evil-nerd-commenter
+  :after evil
+  :config
+  (general-define-key "SPC c l" 'evilnc-comment-or-uncomment-lines)
+  (define-key evil-visual-state-map (kbd "SPC c l") 'evilnc-comment-or-uncomment-lines))
 
 (use-package evil-collection
-  :after evil company
+  :after evil
   :config
-  (setq evil-collection-mode-list '(compile company magit term))
-  (general-def 'insert 'override "C-n" 'company-dabbrev)
-  (general-def 'insert 'override "C-p" 'company-dabbrev)
-  (evil-collection-init)
-  )
+  (setq evil-collection-mode-list '(compile
+                                    magit
+                                    term))
+  (evil-collection-init))
 
 (provide 'my-evil)
-

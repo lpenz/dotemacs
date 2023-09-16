@@ -1,4 +1,4 @@
-;; my-flycheck.el
+;; my-flycheck.el -*- lexical-binding: t; -*-
 
 (use-package flycheck
   :init

@@ -1,9 +1,8 @@
-;; my-general.el
+;; my-general.el -*- lexical-binding: t; -*-
 
 (use-package general
   :config
-  (setq general-default-keymaps 'evil-normal-state-map)
-  )
+  (setq-default general-default-keymaps 'evil-normal-state-map))
 
 (provide 'my-general)
 

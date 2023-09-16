@@ -4,7 +4,9 @@
 (use-package lua-mode)
 (use-package cmake-mode)
 (use-package dockerfile-mode)
-(use-package go-mode)
+(use-package go-mode
+  :config
+  (add-hook 'before-save-hook 'gofmt-before-save))
 (use-package graphviz-dot-mode
   :config
   (setq graphviz-dot-indent-width 4))
@@ -27,9 +29,9 @@
 (use-package plantuml-mode)
 (use-package flycheck-plantuml)
 (use-package yaml-mode)
+(use-package flycheck-mypy)
 (use-package python-black)
 (use-package python-isort)
-(add-hook 'before-save-hook 'gofmt-before-save)
 (add-to-list 'auto-mode-alist '("\\.m$" . octave-mode))
 (add-to-list 'auto-mode-alist '("SConstruct" . python-mode))
 (add-to-list 'auto-mode-alist '("SConscript" . python-mode))

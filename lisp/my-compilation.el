@@ -1,7 +1,7 @@
-;; Compilation hooks
+;; my-compilation.el -*- lexical-binding: t; -*-
 
-(setq compilation-window-height 10)
-(setq compilation-scroll-output 'first-error)
+(setq-default compilation-window-height 10)
+(setq-default compilation-scroll-output 'first-error)
 
 ;; Make window at bottom
 (defun my-compilation-hook ()
@@ -23,4 +23,3 @@
 (add-hook 'compilation-mode-hook 'my-compilation-hook)
 
 (provide 'my-compilation)
-

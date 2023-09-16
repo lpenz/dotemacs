@@ -1,4 +1,4 @@
-;; my-magit.el
+;; my-git.el -*- lexical-binding: t; -*-
 
 (use-package magit
   :init
@@ -8,7 +8,8 @@
   (add-to-list 'magit-section-initial-visibility-alist '(unpushed . show))
   (add-to-list 'magit-section-initial-visibility-alist '(recent . show)))
 
-(provide 'my-magit)
+(use-package git-gutter
+  :config
+  (global-git-gutter-mode +1))
 
-(provide 'my-magit)
-
+(provide 'my-git)

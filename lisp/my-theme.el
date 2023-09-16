@@ -1,4 +1,4 @@
-;; my-theme.el
+;; my-theme.el -*- lexical-binding: t; -*-
 
 (use-package spacemacs-theme
   :defer t

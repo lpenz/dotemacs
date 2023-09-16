@@ -1,4 +1,4 @@
-;; my-vertico.el
+;; my-vertico.el -*- lexical-binding: t; -*-
 
 (use-package vertico
   :init
@@ -32,14 +32,12 @@
   ;; (general-define-key :keymaps 'isearch-mode-map "M-e" 'consult-isearch-history)
   ;; (general-define-key :keymaps 'isearch-mode-map "M-s e" 'consult-isearch-history)
   (general-define-key :keymaps 'isearch-mode-map "M-l" 'consult-line)
-  (general-define-key :keymaps 'isearch-mode-map "M-m" 'consult-line-multi)
-  )
+  (general-define-key :keymaps 'isearch-mode-map "M-m" 'consult-line-multi))
 
 (use-package consult-flycheck
   :after consult
   :config
-  (general-define-key "SPC e y" 'consult-flycheck)
-  )
+  (general-define-key "SPC e y" 'consult-flycheck))
 
 ;; A few more useful configurations...
 (use-package emacs

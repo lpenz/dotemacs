@@ -1,4 +1,4 @@
-;; eshell hook
+;; eshell -*- lexical-binding: t; -*-
 
 (straight-use-package
  '(aweshell :type git :host github :repo "manateelazycat/aweshell"))
@@ -11,9 +11,7 @@
   :hook (eshell-mode . esh-autosuggest-mode))
 
 (defun my-eshell-hook ()
-  (general-define-key :keymaps 'eshell-mode-map "TAB" 'completion-at-point)
-  (general-define-key :keymaps 'eshell-mode-map "M-r" 'counsel-esh-history)
-  (general-define-key :keymaps 'eshell-mode-map "C-c r" 'counsel-esh-history))
+  (general-define-key :keymaps 'eshell-mode-map "TAB" 'completion-at-point))
 
 (add-hook 'eshell-mode-hook 'my-eshell-hook)
 

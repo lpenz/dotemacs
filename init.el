@@ -1,75 +1,34 @@
-;; Based on https://github.com/purcell/emacs.d
+;; init.el -*- lexical-binding: t; -*-
+
+(let ((normal-gc-cons-threshold (* 20 1024 1024))
+      (init-gc-cons-threshold (* 128 1024 1024)))
+  (setq gc-cons-threshold init-gc-cons-threshold)
+  (add-hook 'emacs-startup-hook
+            (lambda () (setq gc-cons-threshold normal-gc-cons-threshold))))
+(setq-default gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
-(setq gc-cons-threshold 100000000)
-(run-with-idle-timer
- 5 nil
- (lambda ()
-   (setq gc-cons-threshold 1000000)))
-
 (let ((file-name-handler-alist nil))
+  (dolist (mod '(my-basics
+                 my-pkgmgmt
+                 my-theme
+                 my-general
+                 my-evil
+                 my-git
+                 my-whichkey
+                 my-vertico
+                 my-keys
+                 my-eshell
+                 my-compilation
+                 my-projectile
+                 my-flycheck
+                 ;; my-counshell
+                 my-dev-cpp
+                 my-lsp
+                 my-formats-misc
+                 my-misc
+                 ))
+        (require mod)))
 
-  (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
-
-  ;; (package-initialize) ; done in use-package initialization
-
-  ;; Load files with individual packages and corresponding configs:
-  (require 'my-straight)
-  (require 'my-usepackages)
-  (require 'my-theme)
-  (require 'my-general)
-  (require 'my-evil)
-  (require 'my-magit)
-  (use-package git-gutter :config (global-git-gutter-mode +1))
-  (use-package fill-column-indicator)
-  (use-package yasnippet :config (yas-global-mode 1))
-  ;; (use-package realgud)
-  (require 'my-whichkey)
-  (require 'my-vertico)
-  (require 'my-projectile)
-  (require 'my-autosave)
-  (require 'my-flycheck)
-  (require 'my-ggtags)
-  (require 'my-lsp)
-  (require 'my-winum)
-  (require 'my-compilation)
-  ;; (require 'my-counshell)
-  (require 'my-eshell)
-  (require 'my-shell)
-  (use-package flycheck-mypy)
-  (use-package package-lint)
-  (require 'my-company)
-  (use-package dumb-jump
-    :config
-    (add-hook 'xref-backend-functions #'dumb-jump-xref-activate))
-  (use-package mood-line :config (mood-line-mode))
-  (use-package direnv :config (direnv-mode))
-
-  (require 'my-dev-cpp)
-  (require 'my-formats-misc)
-
-  ;; Settings: ;;;;;;
-
-  (setq-default indent-tabs-mode nil) ;; Indent with spaces
-  (setq inhibit-startup-message t) ;; No startup message
-  (setq scroll-step 1) ;; smooth scrolling
-  (setq visible-bell nil) ;; Avoid screen flicker due to visual bell
-  (setq c-basic-offset 4)
-  (setq ediff-split-window-function 'split-window-horizontally)
-  (require 'my-keys)
-
-  ;; my-afterinit.el overrides whatever a rogue package may have done
-  (add-hook 'after-init-hook (lambda () (require 'my-afterinit)))
-
-  ;; Local configurations
-  (if (file-exists-p "~/.emacs-local.el")
-      (load "~/.emacs-local.el"))
-
-  ;; Customizations go to another file, not to this one
-  (setq custom-file "~/.emacs-custom.el")
-  (write-region "" nil custom-file)
-  (load custom-file)
-
-  (kill-buffer "*scratch*")
-  )
+(kill-buffer "*scratch*")

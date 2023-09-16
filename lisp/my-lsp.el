@@ -1,11 +1,10 @@
-;; my-lsp.el
+;; my-lsp.el -*- lexical-binding: t; -*-
 
 (use-package lsp-mode
   :init
   (general-define-key "SPC l"  'lsp)
   (setq lsp-keymap-prefix "C-c l")
-  :hook (
-         (rust-mode . lsp)
+  :hook ((rust-mode . lsp)
          (lsp-mode . lsp-enable-which-key-integration))
   :commands lsp
   :config

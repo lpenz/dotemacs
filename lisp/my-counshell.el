@@ -1,4 +1,4 @@
-;; my-counshell.el
+;; my-counshell.el -*- lexical-binding: t; -*-
 
 (straight-use-package
  '(counshell :type git :host github :repo "lpenz/counshell"))

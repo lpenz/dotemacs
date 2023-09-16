@@ -1,4 +1,4 @@
-;; ~/.emacs.d/my-afterinit.el
+;; my-afterinit.el -*- lexical-binding: t; -*-
 
 ;; Remove scrollbars, menu bars, and toolbars
 (when (fboundp 'menu-bar-mode) (menu-bar-mode -1))

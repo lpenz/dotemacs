@@ -1,4 +1,4 @@
-;; my-keys.el
+;; my-keys.el -*- lexical-binding: t; -*-
 
 (general-define-key "SPC h h"  'highlight-symbol-at-point)
 (general-define-key "SPC h ."  'highlight-symbol-at-point)
