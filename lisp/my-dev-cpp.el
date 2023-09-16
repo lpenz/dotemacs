@@ -1,4 +1,4 @@
-;; ~/.emacs.d/my-lang-cpp.el
+;; my-dev-cpp.el -*- lexical-binding: t; -*-
 
 (use-package clang-format)
 
@@ -13,5 +13,5 @@
 (setq safe-local-variable-values (quote ((flycheck-gcc-language-standard . "c++17"))))
 (setq safe-local-variable-values (quote ((flycheck-clang-language-standard . "c++17"))))
 
-(provide 'my-lang-cpp)
+(provide 'my-dev-cpp)
 
