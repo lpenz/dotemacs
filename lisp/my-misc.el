@@ -1,10 +1,14 @@
 ;; my-misc.el -*- lexical-binding: t; -*-
 
-(use-package fill-column-indicator)
+(use-package fill-column-indicator
+  :commands set-fill-column)
 
 (use-package mood-line
+  :demand t
+  :custom
+  (mood-line-glyph-alist mood-line-glyphs-unicode)
   :config
-  (mood-line-mode))
+  (mood-line-mode 1))
 
 (use-package direnv
   :config
@@ -15,6 +19,7 @@
   (yas-global-mode 1))
 
 (use-package dumb-jump
+  :demand t
   :config
   (add-hook 'xref-backend-functions #'dumb-jump-xref-activate))
 

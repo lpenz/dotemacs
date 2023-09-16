@@ -24,6 +24,7 @@
                  my-flycheck
                  ;; my-counshell
                  my-dev-cpp
+                 my-dev-python
                  my-lsp
                  my-formats-misc
                  my-misc

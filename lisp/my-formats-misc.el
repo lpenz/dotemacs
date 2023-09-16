@@ -1,40 +1,62 @@
 ;; my-formats-misc.el -*- lexical-binding: t; -*-
 
-(use-package clojure-mode)
-(use-package lua-mode)
-(use-package cmake-mode)
-(use-package dockerfile-mode)
+(use-package lua-mode
+  :mode "\\.lua\\'")
+
+(use-package cmake-mode
+  :mode "\\CMakeLists.txt\\'")
+
+(use-package dockerfile-mode
+  :mode "\\Dockerfile\\'")
+
 (use-package go-mode
-  :config
-  (add-hook 'before-save-hook 'gofmt-before-save))
+  :mode "\\.go\\'"
+  :hook (before-save . gofmt-before-save))
+
 (use-package graphviz-dot-mode
-  :config
-  (setq graphviz-dot-indent-width 4))
-(use-package haskell-mode)
-(use-package ninja-mode)
-(use-package jinja2-mode)
-(use-package markdown-mode)
-(use-package nix-mode)
-(use-package nixpkgs-fmt)
-(use-package py-yapf)
-(use-package rjsx-mode)
+  :mode "\\.dot\\'"
+  :custom
+  (graphviz-dot-indent-width 4))
+
+(use-package haskell-mode
+  :mode "\\.hs\\'")
+
+(use-package ninja-mode
+  :mode "\\.nj\\'")
+
+(use-package jinja2-mode
+  :mode "\\.j2\\'")
+
+(use-package markdown-mode
+  :mode "\\.md\\'")
+
+(use-package nix-mode
+  :mode "\\.nix\\'")
+
+(use-package nixpkgs-fmt
+  :mode "\\.nix\\'")
+
 (use-package rust-mode
-  :config
-  (setq rust-match-angle-brackets nil)
-  (setq rust-format-on-save t))
+  :mode "\\.rs\\'"
+  :custom
+  (rust-match-angle-brackets nil)
+  (rust-format-on-save t))
+
 (use-package shfmt
-  :config
-  (add-hook 'sh-mode-hook 'shfmt-on-save-mode)
-  (setq shfmt-arguments '("-i" "4")))
-(use-package plantuml-mode)
-(use-package flycheck-plantuml)
-(use-package yaml-mode)
-(use-package flycheck-mypy)
-(use-package python-black)
-(use-package python-isort)
-(add-to-list 'auto-mode-alist '("\\.m$" . octave-mode))
-(add-to-list 'auto-mode-alist '("SConstruct" . python-mode))
-(add-to-list 'auto-mode-alist '("SConscript" . python-mode))
-(add-to-list 'auto-mode-alist '("valgrind.*\\.supp$" . conf-mode))
+  :hook (sh-mode . shfmt-on-save-mode)
+  :custom
+  (shfmt-arguments '("-i" "4")))
+
+(use-package plantuml-mode
+  :mode "\\.plantuml\\'")
+(use-package flycheck-plantuml
+  :mode "\\.plantuml\\'")
+
+(use-package yaml-mode
+  :mode "\\.yaml\\'"
+  :mode "\\.yml\\'")
+
+;; (add-to-list 'auto-mode-alist '("\\.m$" . octave-mode))
+;; (add-to-list 'auto-mode-alist '("valgrind.*\\.supp$" . conf-mode))
 
 (provide 'my-formats-misc)

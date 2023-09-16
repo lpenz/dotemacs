@@ -3,8 +3,7 @@
 (use-package vertico
   :init
   (vertico-mode)
-  (setq vertico-count 20)
-  )
+  (setq vertico-count 20))
 
 (use-package consult
   :config
@@ -15,29 +14,30 @@
   (consult-customize
    consult-line-thing-at-point
    :initial (thing-at-point 'symbol))
-  (general-define-key "SPC /" 'consult-line)
-  (general-define-key "SPC e s" 'consult-ripgrep)
-  (general-define-key "SPC e f" 'consult-fd)
-  (general-define-key "SPC e h" 'consult-history)
-  (general-define-key "SPC e i" 'consult-imenu)
-  (general-define-key "SPC e p" 'consult-yank-pop)
-  (general-define-key "SPC p" 'consult-yank-pop)
-  (general-define-key "SPC e m" 'consult-bookmark)
-  (general-define-key "SPC e b" 'consult-buffer)
-  (general-define-key "SPC e c" 'consult-compile-error)
-  (general-define-key "SPC e l" 'consult-flymake)
-  (general-define-key "*" 'consult-line-thing-at-point)
+  :general
+  ("SPC /" 'consult-line)
+  ("SPC e s" 'consult-ripgrep)
+  ("SPC e f" 'consult-fd)
+  ("SPC e h" 'consult-history)
+  ("SPC e i" 'consult-imenu)
+  ("SPC e p" 'consult-yank-pop)
+  ("SPC p" 'consult-yank-pop)
+  ("SPC e m" 'consult-bookmark)
+  ("SPC e b" 'consult-buffer)
+  ("SPC e c" 'consult-compile-error)
+  ("SPC e l" 'consult-flymake)
+  ("*" 'consult-line-thing-at-point)
 
   ;; (general-define-key "SPC e y" 'consult-isearch-history)
   ;; (general-define-key :keymaps 'isearch-mode-map "M-e" 'consult-isearch-history)
   ;; (general-define-key :keymaps 'isearch-mode-map "M-s e" 'consult-isearch-history)
-  (general-define-key :keymaps 'isearch-mode-map "M-l" 'consult-line)
-  (general-define-key :keymaps 'isearch-mode-map "M-m" 'consult-line-multi))
+  (:keymaps 'isearch-mode-map "M-l" 'consult-line)
+  (:keymaps 'isearch-mode-map "M-m" 'consult-line-multi))
 
 (use-package consult-flycheck
   :after consult
-  :config
-  (general-define-key "SPC e y" 'consult-flycheck))
+  :general
+  ("SPC e y" 'consult-flycheck))
 
 ;; A few more useful configurations...
 (use-package emacs
