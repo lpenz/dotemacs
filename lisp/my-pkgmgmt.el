@@ -24,11 +24,13 @@
 (declare-function use-package "ext:use-package-core.el")
 
 (use-package straight
+  :demand t
   :custom
   (straight-use-package-by-default t))
 
 (use-package use-package
+  :demand t
   :custom
-  (setq-default use-package-always-defer t))
+  (use-package-always-defer t))
 
 (provide 'my-pkgmgmt)

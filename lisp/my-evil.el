@@ -1,10 +1,12 @@
 ;; my-evil.el -*- lexical-binding: t; -*-
 
 (use-package general
+  :demand t
   :config
   (setq-default general-default-keymaps 'evil-normal-state-map))
 
 (use-package evil
+  :demand t
   :init
   (setq evil-want-integration t)
   (setq evil-want-keybinding nil)
@@ -31,9 +33,9 @@
 
 (use-package evil-nerd-commenter
   :after evil
-  :config
-  (general-define-key "SPC c l" 'evilnc-comment-or-uncomment-lines)
-  (define-key evil-visual-state-map (kbd "SPC c l") 'evilnc-comment-or-uncomment-lines))
+  :general
+  ("SPC c l" 'evilnc-comment-or-uncomment-lines)
+  (:keymaps 'evil-visual-state-map "SPC c l" 'evilnc-comment-or-uncomment-lines))
 
 (use-package evil-collection
   :after evil
