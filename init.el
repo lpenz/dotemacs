@@ -13,7 +13,6 @@
   (dolist (mod '(my-basics
                  my-pkgmgmt
                  my-theme
-                 my-general
                  my-evil
                  my-git
                  my-whichkey

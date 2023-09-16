@@ -1,5 +1,9 @@
 ;; my-evil.el -*- lexical-binding: t; -*-
 
+(use-package general
+  :config
+  (setq-default general-default-keymaps 'evil-normal-state-map))
+
 (use-package evil
   :init
   (setq evil-want-integration t)
