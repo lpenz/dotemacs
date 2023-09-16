@@ -37,6 +37,7 @@
   (:keymaps 'evil-visual-state-map "SPC c l" 'evilnc-comment-or-uncomment-lines))
 
 (use-package evil-collection
+  :demand t
   :after evil
   :config
   (setq evil-collection-mode-list '(compile
