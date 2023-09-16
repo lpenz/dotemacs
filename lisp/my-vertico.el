@@ -3,7 +3,14 @@
 (use-package vertico
   :init
   (vertico-mode)
-  (setq vertico-count 20))
+  (setq vertico-count 20)
+  :config
+  (defun vertico-down-from-outside ()
+    "Move to next candidate in minibuffer, even when minibuffer isn't selected."
+    (interactive)
+    (with-selected-window (active-minibuffer-window)
+      (execute-kbd-macro [down])))
+  (general-define-key "<f4>" 'vertico-down-from-outside))
 
 (use-package consult
   :config

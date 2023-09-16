@@ -22,7 +22,6 @@
   ;; ("SPC f f" 'find-file)
   ("SPC b b" 'switch-to-buffer)
   ("SPC SPC" 'execute-extended-command)
-  ("<f4>" 'next-error)
   :config
   (evil-mode 1)
   ;; Unbind some keys that misbehave when latency is high
