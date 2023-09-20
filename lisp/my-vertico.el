@@ -14,6 +14,8 @@
 
 (use-package consult
   :config
+
+  ;; Adds support for * as consult-line-thing-at-point
   (consult-customize
    consult-line
    :add-history (seq-some #'thing-at-point '(region symbol)))
@@ -21,6 +23,7 @@
   (consult-customize
    consult-line-thing-at-point
    :initial (thing-at-point 'symbol))
+
   :general
   ("SPC /" 'consult-line)
   ("SPC e s" 'consult-ripgrep)
