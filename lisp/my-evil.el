@@ -39,10 +39,15 @@
 (use-package evil-collection
   :demand t
   :after evil
+  :init
+  (setq-default evil-collection-mode-list
+                '(compile
+                  consult
+                  eshell
+                  magit
+                  magit-section
+                  vertico))
   :config
-  (setq evil-collection-mode-list '(compile
-                                    magit
-                                    term))
   (evil-collection-init))
 
 (provide 'my-evil)
