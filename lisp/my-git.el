@@ -1,6 +1,7 @@
 ;; my-git.el -*- lexical-binding: t; -*-
 
 (use-package magit
+  :straight (magit :type git :host github :repo "magit/magit" :branch "v3.3.0")
   :init
   (setq magit-save-repository-buffers 'dontask)
   :general
