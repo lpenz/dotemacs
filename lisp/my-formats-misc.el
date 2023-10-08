@@ -56,6 +56,9 @@
   :mode "\\.yaml\\'"
   :mode "\\.yml\\'")
 
+(use-package dts-mode
+  :mode "\\.keymap\\'")
+
 ;; (add-to-list 'auto-mode-alist '("\\.m$" . octave-mode))
 ;; (add-to-list 'auto-mode-alist '("valgrind.*\\.supp$" . conf-mode))
 
