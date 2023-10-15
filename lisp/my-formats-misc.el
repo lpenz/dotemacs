@@ -34,7 +34,7 @@
   :mode "\\.nix\\'")
 
 (use-package nixpkgs-fmt
-  :mode "\\.nix\\'")
+  :hook (nix-mode . nixpkgs-fmt-on-save-mode))
 
 (use-package rust-mode
   :mode "\\.rs\\'"
