@@ -1,6 +1,7 @@
 ;; my-whichkey.el -*- lexical-binding: t; -*-
 
 (use-package which-key
+  :demand t
   :after evil
   :config
   (which-key-mode)
