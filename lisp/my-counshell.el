@@ -4,11 +4,10 @@
  '(counshell :type git :host github :repo "lpenz/counshell"))
 
 (use-package counshell
-  :config
-   (general-define-key "SPC e e" 'counshell-projectile-sh)
-   (general-define-key "SPC e ]" 'counshell-projectile-gnuglobal)
-   (general-define-key "SPC e s" 'counshell-projectile-rg)
-   (general-define-key "SPC e f" 'counshell-projectile-fd)
+  :general
+  ("SPC e e" 'counshell-projectile-sh)
+  ("SPC e ]" 'counshell-projectile-gnuglobal)
+  ("SPC e r" 'counshell-projectile-rg)
   )
 
 (provide 'my-counshell)

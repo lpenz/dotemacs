@@ -22,7 +22,7 @@
                  my-compilation
                  my-projectile
                  my-flycheck
-                 ;; my-counshell
+                 my-counshell
                  my-dev-cpp
                  my-dev-python
                  my-lsp
