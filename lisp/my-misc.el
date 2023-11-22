@@ -4,7 +4,6 @@
   :commands set-fill-column)
 
 (use-package mood-line
-  :straight (mood-line :type git :host gitlab :repo "jessieh/mood-line" :branch "2.3.0")
   :demand t
   :custom
   (mood-line-glyph-alist mood-line-glyphs-unicode)

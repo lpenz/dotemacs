@@ -10,7 +10,9 @@
 /.cache
 /quelpa
 /transient
-/straight
+/straight/repos/
+/straight/build/
+/straight/build-cache.el
 *~
 /eln-cache/
 /.lsp-session*
