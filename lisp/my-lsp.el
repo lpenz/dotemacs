@@ -26,6 +26,8 @@
   (setq lsp-completion-provider :none)
   (setq lsp-completion-show-detail nil)
   (setq lsp-completion-show-kind nil)
+  (setq lsp-enable-snippet nil)
+  (setq lsp-enable-on-type-formatting nil)
   (setq lsp-rust-server 'rust-analyzer))
 
 ;; extensions:
