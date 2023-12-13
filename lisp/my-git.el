@@ -11,6 +11,7 @@
   (add-to-list 'magit-section-initial-visibility-alist '(recent . show)))
 
 (use-package git-gutter
+  :demand t
   :config
   (global-git-gutter-mode +1))
 
