@@ -88,6 +88,7 @@
   (marginalia-mode))
 
 (use-package embark
+  :demand t
   :bind
   (("C-o" . embark-act)         ;; pick some comfortable binding
    ;; ("C-o" . embark-dwim)        ;; good alternative: M-.
