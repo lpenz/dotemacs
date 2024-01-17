@@ -23,6 +23,8 @@
   (consult-customize
    consult-line-thing-at-point
    :initial (thing-at-point 'symbol))
+  (setq xref-show-xrefs-function #'consult-xref
+        xref-show-definitions-function #'consult-xref)
 
   :general
   ("SPC /" 'consult-line)
