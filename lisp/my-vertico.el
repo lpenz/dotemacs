@@ -13,6 +13,8 @@
   (general-define-key "<f4>" 'vertico-down-from-outside))
 
 (use-package consult
+  :demand t
+  :after embark-consult
   :config
 
   ;; Adds support for * as consult-line-thing-at-point
@@ -118,6 +120,7 @@
 
 ;; Consult users will also want the embark-consult package.
 (use-package embark-consult
+  :demand t
   :hook
   (embark-collect-mode . consult-preview-at-point-mode))
 
