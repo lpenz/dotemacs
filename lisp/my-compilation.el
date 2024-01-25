@@ -1,5 +1,8 @@
 ;; my-compilation.el -*- lexical-binding: t; -*-
 
+(use-package ansi-color
+  :hook (compilation-filter . ansi-color-compilation-filter))
+
 (setq-default compilation-window-height 10)
 (setq-default compilation-scroll-output 'first-error)
 
