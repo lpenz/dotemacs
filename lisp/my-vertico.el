@@ -93,22 +93,14 @@
 
 (use-package embark
   :demand t
-  :bind
-  (("C-o" . embark-act)         ;; pick some comfortable binding
-   ;; ("C-o" . embark-dwim)        ;; good alternative: M-.
-   ("C-h B" . embark-bindings)) ;; alternative for `describe-bindings'
-
-  :init
-
-  (setq embark-indicators '())
-
-  ;; Optionally replace the key help with a completing-read interface
-  (setq prefix-help-command #'embark-prefix-help-command)
-
-  ;; Show the Embark target at point via Eldoc.  You may adjust the Eldoc
-  ;; strategy, if you want to see the documentation from multiple providers.
-  ;; (add-hook 'eldoc-documentation-functions #'embark-eldoc-first-target)
-  ;; (setq eldoc-documentation-strategy #'eldoc-documentation-compose-eagerly)
+  :general
+  (:keymaps 'evil-normal-state-map "M-j" 'embark-act)
+  (:keymaps 'evil-normal-state-map "M-k" 'embark-dwim)
+  (:keymaps 'minibuffer-local-map "M-j" 'embark-act)
+  (:keymaps 'minibuffer-local-map "M-k" 'embark-dwim)
+  ;; Alternative for `describe-bindings':
+  (:keymaps 'evil-normal-state-map "C-h B" 'embark-bindings)
+  (:keymaps 'minibuffer-local-map "C-h B" 'embark-bindings)
 
   :config
 
