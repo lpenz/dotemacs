@@ -4,13 +4,16 @@
   :init
   (vertico-mode)
   (setq vertico-count 20)
+  :general
+  ("<f4>" 'vertico-down-from-outside)
+  (:keymaps 'vertico-map "<next>" 'vertico-scroll-up)
+  (:keymaps 'vertico-map "<prior>" 'vertico-scroll-down)
   :config
   (defun vertico-down-from-outside ()
     "Move to next candidate in minibuffer, even when minibuffer isn't selected."
     (interactive)
     (with-selected-window (active-minibuffer-window)
-      (execute-kbd-macro [down])))
-  (general-define-key "<f4>" 'vertico-down-from-outside))
+      (execute-kbd-macro [down]))))
 
 (use-package consult
   :demand t
