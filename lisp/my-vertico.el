@@ -38,6 +38,7 @@
   ("SPC e h" 'consult-history)
   ("SPC e i" 'consult-imenu)
   ("SPC e p" 'consult-yank-pop)
+  ("SPC e v" 'set-variable)
   ("SPC p" 'consult-yank-pop)
   ("SPC e m" 'consult-bookmark)
   ("SPC e b" 'consult-buffer)
