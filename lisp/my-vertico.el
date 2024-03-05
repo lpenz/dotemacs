@@ -6,6 +6,8 @@
   (setq vertico-count 20)
   :general
   ("<f4>" 'vertico-down-from-outside)
+  ("SPC a" 'ff-find-other-file)
+  ("<f10>" 'project-compile)
   (:keymaps 'vertico-map "<next>" 'vertico-scroll-up)
   (:keymaps 'vertico-map "<prior>" 'vertico-scroll-down)
   :config
