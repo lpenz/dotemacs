@@ -20,7 +20,6 @@
                  my-keys
                  my-eshell
                  my-compilation
-                 my-projectile
                  my-flycheck
                  my-counshell
                  my-dev-cpp
