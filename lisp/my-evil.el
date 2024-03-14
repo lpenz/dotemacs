@@ -22,8 +22,13 @@
   ;; ("SPC f f" 'find-file)
   ("SPC b b" 'switch-to-buffer)
   ("SPC SPC" 'execute-extended-command)
+  (:keymaps 'evil-visual-state-map "SPC a" 'my-align-regexp)
   :config
   (evil-mode 1)
+  (defun my-align-regexp (start end regexp)
+    "Repeat alignment with respect to the given regular expression."
+    (interactive "r\nsAlign regexp: ")
+    (align-regexp start end (concat "\\(\\s-*\\)" regexp) 1 1 t))
   ;; Unbind some keys that misbehave when latency is high
   (global-set-key (kbd "M-k") nil)
   (global-set-key (kbd "M-j") nil)
