@@ -7,5 +7,6 @@
 (setq-default ediff-split-window-function 'split-window-horizontally)
 (setq version-control 'never)
 (setq make-backup-files nil)
+(setq compile-command "omnibuild")
 
 (provide 'my-basics)
