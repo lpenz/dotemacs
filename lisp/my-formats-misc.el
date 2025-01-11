@@ -39,7 +39,7 @@
 (use-package rust-mode
   :mode "\\.rs\\'"
   :custom
-  (rust-match-angle-brackets nil)
+  (rust-match-angle-brackets t)
   (rust-format-on-save t))
 
 (use-package shfmt
