@@ -17,6 +17,7 @@
                  my-git
                  my-whichkey
                  my-vertico
+                 my-corfu
                  my-keys
                  my-eshell
                  my-compilation

@@ -44,10 +44,12 @@
 (use-package evil-collection
   :demand t
   :after evil
+  :after cape
   :init
   (setq-default evil-collection-mode-list
                 '(compile
                   consult
+                  corfu
                   eshell
                   magit
                   magit-section
