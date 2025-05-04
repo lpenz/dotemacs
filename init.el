@@ -27,7 +27,6 @@
                  my-corfu
                  my-keys
                  my-eshell
-                 my-compilation
                  my-flycheck
                  my-counshell
                  my-dev-cpp
