@@ -50,6 +50,9 @@
   :custom
   (shfmt-arguments '("-i" "4")))
 
+(use-package rpm-spec-mode
+  :mode "\\.spec\\'")
+
 (use-package plantuml-mode
   :mode "\\.plantuml\\'")
 (use-package flycheck-plantuml
