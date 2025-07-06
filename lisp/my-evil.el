@@ -18,6 +18,8 @@
   ("C-w <right>" 'evil-window-right)
   ("C-w <up>"    'evil-window-up)
   ("C-w <down>"  'evil-window-down)
+  ("C-w e"  'delete-other-windows)
+  ("C-w C-e"  'delete-other-windows)
   ("SPC TAB" 'evil-buffer)
   ;; ("SPC f f" 'find-file)
   ("SPC b b" 'switch-to-buffer)
