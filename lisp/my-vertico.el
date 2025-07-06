@@ -7,10 +7,15 @@
   :general
   ("<f4>" 'vertico-down-from-outside)
   ("SPC a" 'ff-find-other-file)
-  ("<f10>" 'project-compile)
+  ("<f10>" 'save-then-compile)
   (:keymaps 'vertico-map "<next>" 'vertico-scroll-up)
   (:keymaps 'vertico-map "<prior>" 'vertico-scroll-down)
   :config
+  (defun save-then-compile ()
+    "Save all buffers and compile the project."
+    (interactive)
+    (save-some-buffers t)
+    (project-compile))
   (defun vertico-down-from-outside ()
     "Move to next candidate in minibuffer, even when minibuffer isn't selected."
     (interactive)
