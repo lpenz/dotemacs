@@ -35,6 +35,7 @@
                  my-lsp
                  my-formats-misc
                  my-misc
+                 my-ai
                  ))
         (require mod)))
 
