@@ -29,6 +29,7 @@
                  my-eshell
                  my-flycheck
                  my-counshell
+                 my-compilation
                  my-dev-cpp
                  my-dev-python
                  my-lsp
