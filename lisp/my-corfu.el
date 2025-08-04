@@ -45,10 +45,4 @@
   (add-hook 'completion-at-point-functions #'cape-dabbrev)
 )
 
-(use-package nerd-icons-corfu
-  :demand t
-  :after corfu
-  :config
-  (add-to-list 'corfu-margin-formatters #'nerd-icons-corfu-formatter))
-
 (provide 'my-corfu)
