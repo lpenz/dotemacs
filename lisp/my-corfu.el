@@ -3,6 +3,8 @@
 ;; corfu.el - COmpletion in Region FUnction
 (use-package corfu
   :demand t
+  :general
+  (:keymaps 'evil-insert-state-map "C-f" 'completion-at-point)
   :config
   (global-corfu-mode)
   ;; (corfu-history-mode)
