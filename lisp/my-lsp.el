@@ -4,8 +4,7 @@
   :general
   ("SPC l"  'lsp)
   :commands lsp
-  :hook ((rust-mode . lsp)
-         (lsp-mode . lsp-enable-which-key-integration))
+  :hook ((lsp-mode . lsp-enable-which-key-integration))
   :config
   (setq lsp-ui-doc-enable nil)
   (setq lsp-ui-doc-show-with-cursor nil)
@@ -28,8 +27,8 @@
   (setq lsp-completion-show-kind nil)
   (setq lsp-enable-snippet nil)
   (setq lsp-enable-on-type-formatting nil)
-  (setq lsp-rust-analyzer-cargo-extra-env (make-hash-table :test 'equal))
-  (setq lsp-rust-server 'rust-analyzer))
+  (setq lsp-rust-server 'rust-analyzer)
+  )
 
 ;; extensions:
 

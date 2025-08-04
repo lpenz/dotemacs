@@ -16,4 +16,5 @@
 *~
 /eln-cache/
 /.lsp-session*
+/tree-sitter/
 /projects

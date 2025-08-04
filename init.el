@@ -30,10 +30,11 @@
                  my-flycheck
                  my-counshell
                  my-compilation
+                 my-treesitter
+                 my-lsp
                  my-dev-cpp
                  my-dev-python
                  my-dev-rust
-                 my-lsp
                  my-formats-misc
                  my-misc
                  ))
