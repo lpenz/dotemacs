@@ -40,11 +40,15 @@
   :general
   ("C-p" 'cape-dabbrev)
   ("C-n" 'cape-prefix-map)
-  (:keymaps 'evil-insert-state-map "C-p" 'cape-dabbrev)
+  (:keymaps 'evil-insert-state-map "C-p" 'my/cape-dabbrev-completion)
   (:keymaps 'evil-insert-state-map "C-n" 'cape-prefix-map)
   (:keymaps 'cape-prefix-map "C-n" 'completion-at-point)
   :config
-  (add-hook 'completion-at-point-functions #'cape-dabbrev)
-)
+  (defun my/cape-dabbrev-completion ()
+    "Run completion using only `cape-dabbrev`."
+    (interactive)
+    (let ((completion-at-point-functions '(cape-dabbrev)))
+      (completion-at-point)))
+  )
 
 (provide 'my-corfu)
