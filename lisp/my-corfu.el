@@ -7,8 +7,10 @@
   (:keymaps 'evil-insert-state-map "C-f" 'completion-at-point)
   :config
   (global-corfu-mode)
-  ;; (corfu-history-mode)
-  ;; (corfu-popupinfo-mode)
+  (corfu-popupinfo-mode)
+  (corfu-history-mode)
+  :custom
+  (corfu-popupinfo-delay 0.2)
   )
 
 ;; A few more useful configurations...
@@ -44,11 +46,16 @@
   (:keymaps 'evil-insert-state-map "C-n" 'cape-prefix-map)
   (:keymaps 'cape-prefix-map "C-n" 'completion-at-point)
   :config
+  ;; Run completion with just cape-dabbrev
   (defun my/cape-dabbrev-completion ()
     "Run completion using only `cape-dabbrev`."
     (interactive)
     (let ((completion-at-point-functions '(cape-dabbrev)))
       (completion-at-point)))
+  ;; Restrict words to current buffer
+  (defun my/dabbrev-current-buffer-only ()
+    (list (current-buffer)))
+  (advice-add 'dabbrev--select-buffers :override #'my/dabbrev-current-buffer-only)
   )
 
 (provide 'my-corfu)
