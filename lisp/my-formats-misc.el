@@ -48,12 +48,6 @@
 (use-package nixpkgs-fmt
   :hook (nix-mode . nixpkgs-fmt-on-save-mode))
 
-(use-package rust-mode
-  :mode "\\.rs\\'"
-  :custom
-  (rust-match-angle-brackets t)
-  (rust-format-on-save t))
-
 (use-package shfmt
   :hook (sh-mode . shfmt-on-save-mode)
   :custom

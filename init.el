@@ -32,6 +32,7 @@
                  my-compilation
                  my-dev-cpp
                  my-dev-python
+                 my-dev-rust
                  my-lsp
                  my-formats-misc
                  my-misc
