@@ -6,28 +6,10 @@
   :commands lsp
   :hook ((lsp-mode . lsp-enable-which-key-integration))
   :config
-  (setq lsp-ui-doc-enable nil)
-  (setq lsp-ui-doc-show-with-cursor nil)
-  (setq lsp-ui-doc-show-with-mouse nil)
-  (setq lsp-lens-enable nil)
-  (setq lsp-headerline-breadcrumb-enable nil)
-  (setq lsp-ui-sideline-enable nil)
-  (setq lsp-ui-sideline-show-code-actions nil)
-  (setq lsp-ui-sideline-enable nil)
-  (setq lsp-modeline-code-actions-enable nil)
-  (setq lsp-diagnostics-provider :none)
-  (setq lsp-ui-sideline-enable nil)
-  (setq lsp-ui-sideline-show-diagnostics nil)
-  (setq lsp-eldoc-enable-hover nil)
-  (setq lsp-modeline-diagnostics-enable nil)
-  (setq lsp-signature-auto-activate nil)
-  (setq lsp-signature-render-documentation nil)
+  ;; Disable lsp completion to enable corfu
   (setq lsp-completion-provider :none)
-  (setq lsp-completion-show-detail nil)
-  (setq lsp-completion-show-kind nil)
+  ;; Disable generic snippets
   (setq lsp-enable-snippet nil)
-  (setq lsp-enable-on-type-formatting nil)
-  (setq lsp-rust-server 'rust-analyzer)
   )
 
 ;; extensions:
