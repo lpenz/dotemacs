@@ -34,4 +34,20 @@
         (tsx . (("https://github.com/tree-sitter/tree-sitter-typescript") ("master") ("tsx/src")))
         (typescript . (("https://github.com/tree-sitter/tree-sitter-typescript") ("master") ("typescript/src")))))
 
+;; Remap modes for built-in supported languages
+(setq major-mode-remap-alist
+      '((python-mode . python-ts-mode)))
+
+;; Improve the quality of tree-sitter font-locking (highlighting)
+;; The default is 3. Level 4 provides the most detailed highlighting.
+(setq treesit-font-lock-level 4)
+
+;; Install the grammars by demand
+
+(defun my-ensure-python-treesit-grammar ()
+  "Ensure Python tree-sitter grammar is installed before loading the mode."
+  (unless (treesit-language-available-p 'python)
+    (treesit-install-language-grammar 'python)))
+(add-hook 'python-ts-mode-hook #'my-ensure-python-treesit-grammar)
+
 (provide 'my-treesitter)
