@@ -14,12 +14,7 @@
          )
   :init
   (require 'treesit)
-  ;; Add the grammar recipe manually (in case it's missing)
-  (add-to-list 'treesit-language-source-alist
-               '(rust "https://github.com/tree-sitter/tree-sitter-rust"))
-  ;; Install grammar if it's not already available
-  (unless (treesit-language-available-p 'rust)
-    (treesit-install-language-grammar 'rust))
+  (my-treesit-setup-lang 'rust #'rust-ts-mode "https://github.com/tree-sitter/tree-sitter-rust")
   (defun my/rust-format-on-save ()
     "Format Rust buffer using LSP before saving."
     (add-hook 'before-save-hook #'lsp-format-buffer nil t))

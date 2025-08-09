@@ -15,4 +15,10 @@
 (add-to-list 'auto-mode-alist '("SConstruct" . python-mode))
 (add-to-list 'auto-mode-alist '("SConscript" . python-mode))
 
+(add-hook 'python-ts-mode-hook
+          (lambda() (my-treesit-setup-lang
+                     'python
+                     #'python-ts-mode
+                     "https://github.com/tree-sitter/tree-sitter-python")))
+
 (provide 'my-dev-python)
