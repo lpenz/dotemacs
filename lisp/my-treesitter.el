@@ -35,7 +35,9 @@
 
 ;; Remap modes for built-in supported languages
 (setq major-mode-remap-alist
-      '((python-mode . python-ts-mode)))
+      '((python-mode . python-ts-mode)
+        (sh-mode . bash-ts-mode))
+      )
 
 ;; Improve the quality of tree-sitter font-locking (highlighting)
 ;; The default is 3. Level 4 provides the most detailed highlighting.

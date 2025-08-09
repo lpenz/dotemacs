@@ -48,11 +48,6 @@
 (use-package nixpkgs-fmt
   :hook (nix-mode . nixpkgs-fmt-on-save-mode))
 
-(use-package shfmt
-  :hook (sh-mode . shfmt-on-save-mode)
-  :custom
-  (shfmt-arguments '("-i" "4")))
-
 (use-package rpm-spec-mode
   :mode "\\.spec\\'")
 

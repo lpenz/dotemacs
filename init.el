@@ -32,6 +32,7 @@
                  my-compilation
                  my-treesitter
                  my-lsp
+                 my-dev-bash
                  my-dev-cpp
                  my-dev-python
                  my-dev-rust
