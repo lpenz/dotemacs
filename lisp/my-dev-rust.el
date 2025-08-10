@@ -13,7 +13,6 @@
          (rust-ts-mode . my/rust-format-on-save)
          )
   :init
-  (require 'treesit)
   (my-treesit-setup-lang 'rust #'rust-ts-mode "https://github.com/tree-sitter/tree-sitter-rust")
   (defun my/rust-format-on-save ()
     "Format Rust buffer using LSP before saving."

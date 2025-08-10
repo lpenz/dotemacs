@@ -10,6 +10,7 @@
   (corfu-popupinfo-mode)
   (corfu-history-mode)
   :custom
+  (corfu-auto t)
   (corfu-popupinfo-delay 0.2)
   )
 
