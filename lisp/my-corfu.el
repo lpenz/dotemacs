@@ -9,6 +9,7 @@
   (global-corfu-mode)
   (corfu-popupinfo-mode)
   (corfu-history-mode)
+  (setq corfu-preselect 'prompt)
   :custom
   (corfu-auto t)
   (corfu-popupinfo-delay 0.2)
