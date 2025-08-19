@@ -12,13 +12,19 @@
   :config
   (add-to-list 'safe-local-variable-values (quote (eval (lambda nil (python-isort-on-save-mode t))))))
 
+(use-package lsp-pyright
+  :demand t
+  :after python)
+
 (add-to-list 'auto-mode-alist '("SConstruct" . python-mode))
 (add-to-list 'auto-mode-alist '("SConscript" . python-mode))
 
 (add-hook 'python-ts-mode-hook
-          (lambda() (my-treesit-setup-lang
-                     'python
-                     #'python-ts-mode
-                     "https://github.com/tree-sitter/tree-sitter-python")))
+          (lambda()
+            (my-treesit-setup-lang
+             'python
+             #'python-ts-mode
+             "https://github.com/tree-sitter/tree-sitter-python")
+            (lsp-deferred)))
 
 (provide 'my-dev-python)
