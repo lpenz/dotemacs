@@ -24,6 +24,13 @@
   ;; ("SPC f f" 'find-file)
   ("SPC b b" 'switch-to-buffer)
   ("SPC SPC" 'execute-extended-command)
+  ("SPC ] ]" 'xref-find-definitions)
+  ("SPC ] [" 'xref-find-references)
+  ("SPC ] /" 'xref-find-apropos)
+  ("SPC ] f" 'lsp-find-definition)
+  ("SPC ] c" 'lsp-find-declaration)
+  ("SPC ] r" 'lsp-find-references)
+  ("SPC ] t" 'lsp-find-implementation)
   (:keymaps 'evil-visual-state-map "SPC a" 'my-align-regexp)
   :config
   (evil-mode 1)
