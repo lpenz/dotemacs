@@ -18,10 +18,10 @@
   :config
   (yas-global-mode 1))
 
-(use-package dumb-jump
-  :demand t
-  :config
-  (add-hook 'xref-backend-functions #'dumb-jump-xref-activate))
+;; (use-package dumb-jump
+;;   :demand t
+;;   :config
+;;   (add-hook 'xref-backend-functions #'dumb-jump-xref-activate))
 
 (add-hook 'after-init-hook (lambda () (require 'my-afterinit)))
 
