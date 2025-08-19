@@ -55,6 +55,7 @@
                   eshell
                   magit
                   magit-section
+                  xref
                   vertico))
   :config
   (evil-collection-init))
