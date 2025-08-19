@@ -9,7 +9,7 @@
 
 (use-package rust-ts-mode
   :mode "\\.rs\\'"
-  :hook ((rust-ts-mode . lsp)
+  :hook ((rust-ts-mode . lsp-deferred)
          (rust-ts-mode . my/rust-format-on-save)
          )
   :init
