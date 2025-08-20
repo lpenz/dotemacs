@@ -10,7 +10,7 @@
 
 (when (display-graphic-p)
   ;; (set-frame-font "Inconsolata-12")
-  (set-frame-font "MesloLGS Nerd Font Mono-11")
+  (set-frame-font "MesloLGS Nerd Font Mono-12")
   ;; (set-fontset-font t 'unicode "Symbola" nil 'prepend)
   (set-fontset-font t 'unicode "Noto Color Emoji" nil 'prepend))
 
