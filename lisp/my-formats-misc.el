@@ -56,9 +56,13 @@
 (use-package flycheck-plantuml
   :mode "\\.plantuml\\'")
 
-(use-package yaml-mode
-  :mode "\\.yaml\\'"
-  :mode "\\.yml\\'")
+(use-package yaml
+  :mode ("\\.ya?ml\\'" . yaml-ts-mode)
+  :hook (yaml-ts-mode . (lambda()
+                          (my-treesit-setup-lang
+                           'yaml
+                           #'yaml-ts-mode
+                           "https://github.com/tree-sitter-grammars/tree-sitter-yaml"))))
 
 (use-package dts-mode
   :mode "\\.keymap\\'")
