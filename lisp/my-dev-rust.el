@@ -1,22 +1,23 @@
 ;; my-dev-rust.el -*- lexical-binding: t; -*-
 
-(require 'compile)
-(add-to-list 'compilation-error-regexp-alist-alist
-             '(rustc
-               "^\\(?:error\\|warning\\).*\\(?:\n *--> \\)?\\([^:\n]+\\):\\([0-9]+\\):\\([0-9]+\\)"
-               1 2 3))
-(add-to-list 'compilation-error-regexp-alist 'rustc)
-
 (use-package rust-ts-mode
   :mode "\\.rs\\'"
-  :hook ((rust-ts-mode . lsp-deferred)
-         (rust-ts-mode . my/rust-format-on-save)
-         )
+  :hook
+  (rust-ts-mode . (lambda()
+                    (lsp-deferred)
+                    (apheleia-mode 1)
+                    (require 'compile)
+                    (add-to-list 'compilation-error-regexp-alist-alist
+                                 '(rustc
+                                   "^\\(?:error\\|warning\\).*\\(?:\n *--> \\)?\\([^:\n]+\\):\\([0-9]+\\):\\([0-9]+\\)"
+                                   1 2 3))
+                    (add-to-list 'compilation-error-regexp-alist 'rustc)
+                    ))
   :init
-  (my-treesit-setup-lang 'rust #'rust-ts-mode "https://github.com/tree-sitter/tree-sitter-rust")
-  (defun my/rust-format-on-save ()
-    "Format Rust buffer using LSP before saving."
-    (add-hook 'before-save-hook #'lsp-format-buffer nil t))
+  (my-treesit-setup-lang
+   'rust
+   #'rust-ts-mode
+   "https://github.com/tree-sitter/tree-sitter-rust")
   :config
   (setq lsp-rust-analyzer-cargo-extra-env (make-hash-table :test 'equal))
   )

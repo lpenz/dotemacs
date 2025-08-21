@@ -1,17 +1,5 @@
 ;; my-dev-python.el -*- lexical-binding: t; -*-
 
-(use-package python-black
-  :demand t
-  :after python
-  :config
-  (add-to-list 'safe-local-variable-values (quote (eval (lambda nil (python-black-on-save-mode t))))))
-
-(use-package python-isort
-  :demand t
-  :after python
-  :config
-  (add-to-list 'safe-local-variable-values (quote (eval (lambda nil (python-isort-on-save-mode t))))))
-
 (use-package lsp-pyright
   :demand t
   :after python)
@@ -25,6 +13,9 @@
              'python
              #'python-ts-mode
              "https://github.com/tree-sitter/tree-sitter-python")
-            (lsp-deferred)))
+            (lsp-deferred)
+            (setq-local apheleia-formatter '(isort black))
+            (apheleia-mode 1)
+            ))
 
 (provide 'my-dev-python)

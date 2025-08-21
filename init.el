@@ -31,6 +31,7 @@
                  my-counshell
                  my-compilation
                  my-treesitter
+                 my-apheleia
                  my-lsp
                  my-dev-bash
                  my-dev-cpp
