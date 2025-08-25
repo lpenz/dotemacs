@@ -8,6 +8,8 @@
         '("isort" "--stdout" "-"))
   (setf (alist-get 'rustfmt apheleia-formatters)
         '("rustfmt" "--edition" "2024" "--quiet" "--emit" "stdout"))
+  (setf (alist-get 'yamlfmt apheleia-formatters)
+        '("yamlfix" "-"))
   )
 
 (provide 'my-apheleia)

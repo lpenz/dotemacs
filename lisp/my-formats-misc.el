@@ -59,6 +59,8 @@
 (use-package yaml
   :mode ("\\.ya?ml\\'" . yaml-ts-mode)
   :hook (yaml-ts-mode . (lambda()
+                          (setq-local apheleia-formatter '(yamlfmt))
+                          (apheleia-mode 1)
                           (my-treesit-setup-lang
                            'yaml
                            #'yaml-ts-mode
