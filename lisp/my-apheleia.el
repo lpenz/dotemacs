@@ -10,6 +10,8 @@
         '("rustfmt" "--edition" "2024" "--quiet" "--emit" "stdout"))
   (setf (alist-get 'yamlfmt apheleia-formatters)
         '("yamlfix" "-"))
+  (setf (alist-get 'fishfmt apheleia-formatters)
+        '("fish_indent"))
   )
 
 (provide 'my-apheleia)

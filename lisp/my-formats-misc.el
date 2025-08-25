@@ -1,7 +1,5 @@
 ;; my-formats-misc.el -*- lexical-binding: t; -*-
 
-(use-package reformatter)
-
 (use-package lua-mode
   :mode "\\.lua\\'")
 
@@ -36,13 +34,10 @@
   :mode "\\.nix\\'")
 
 (use-package fish-mode
-  :after reformatter
   :mode "\\.fish\\'"
-  :config
-  (reformatter-define fish-format
-    :program "fish_indent"
-    :args '())
-  (add-hook 'fish-mode-hook #'fish-format-on-save-mode)
+  :hook (fish-mode . (lambda()
+                       (setq-local apheleia-formatter '(fishfmt))
+                       (apheleia-mode 1)))
   )
 
 (use-package nixpkgs-fmt
