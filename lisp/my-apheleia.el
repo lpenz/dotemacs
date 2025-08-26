@@ -1,6 +1,7 @@
 ;; my-apheleia.el -*- lexical-binding: t; -*-
 
 (use-package apheleia
+  :demand t
   :general
   ("SPC f" 'apheleia-format-buffer)
   :config
@@ -12,6 +13,7 @@
         '("yamlfix" "-"))
   (setf (alist-get 'fishfmt apheleia-formatters)
         '("fish_indent"))
+  (apheleia-global-mode 1)
   )
 
 (provide 'my-apheleia)

@@ -37,8 +37,7 @@
   :mode "\\.fish\\'"
   :hook (fish-mode . (lambda()
                        (setq-local apheleia-formatter '(fishfmt))
-                       (apheleia-mode 1)))
-  )
+                       )))
 
 (use-package nixpkgs-fmt
   :hook (nix-mode . nixpkgs-fmt-on-save-mode))
@@ -55,7 +54,6 @@
   :mode ("\\.ya?ml\\'" . yaml-ts-mode)
   :hook (yaml-ts-mode . (lambda()
                           (setq-local apheleia-formatter '(yamlfmt))
-                          (apheleia-mode 1)
                           (my-treesit-setup-lang
                            'yaml
                            #'yaml-ts-mode

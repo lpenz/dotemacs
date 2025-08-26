@@ -8,7 +8,6 @@
              "https://github.com/tree-sitter/tree-sitter-bash")
             (lsp-deferred)
             (setq-local apheleia-formatter 'shfmt)
-            (apheleia-mode 1)
             ))
 
 (provide 'my-dev-bash)

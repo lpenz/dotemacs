@@ -15,7 +15,6 @@
              "https://github.com/tree-sitter/tree-sitter-python")
             (lsp-deferred)
             (setq-local apheleia-formatter '(isort black))
-            (apheleia-mode 1)
             ))
 
 (provide 'my-dev-python)
