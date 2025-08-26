@@ -65,4 +65,13 @@
 ;; (add-to-list 'auto-mode-alist '("\\.m$" . octave-mode))
 ;; (add-to-list 'auto-mode-alist '("valgrind.*\\.supp$" . conf-mode))
 
+(add-hook 'json-ts-mode-hook
+          (lambda()
+            (my-treesit-setup-lang
+             'json
+             #'json-ts-mode
+             "https://github.com/tree-sitter/tree-sitter-json")
+            (setq-local apheleia-formatter '(python3-json))
+            ))
+
 (provide 'my-formats-misc)
