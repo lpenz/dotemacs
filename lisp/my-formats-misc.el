@@ -36,7 +36,7 @@
 (use-package fish-mode
   :mode "\\.fish\\'"
   :hook (fish-mode . (lambda()
-                       (setq-local apheleia-formatter '(fishfmt))
+                       (setq-local apheleia-formatter '(fish-indent))
                        )))
 
 (use-package nixpkgs-fmt

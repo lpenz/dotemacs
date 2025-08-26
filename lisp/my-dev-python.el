@@ -14,7 +14,7 @@
              #'python-ts-mode
              "https://github.com/tree-sitter/tree-sitter-python")
             (lsp-deferred)
-            (setq-local apheleia-formatter '(isort black))
+            (setq-local apheleia-formatter '(ruff-isort black))
             ))
 
 (provide 'my-dev-python)
