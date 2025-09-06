@@ -5,6 +5,7 @@
   :hook
   (rust-ts-mode . (lambda()
                     (lsp-deferred)
+                    (setq-local apheleia-formatter 'rustfmt)
                     (apheleia-mode 1)
                     (require 'compile)
                     (add-to-list 'compilation-error-regexp-alist-alist
