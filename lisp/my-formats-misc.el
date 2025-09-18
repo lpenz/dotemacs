@@ -74,4 +74,12 @@
             (setq-local apheleia-formatter '(python3-json))
             ))
 
+(add-hook 'toml-ts-mode-hook
+          (lambda()
+            (my-treesit-setup-lang
+             'toml
+             #'toml-ts-mode
+             "https://github.com/tree-sitter/tree-sitter-toml")
+            ))
+
 (provide 'my-formats-misc)
