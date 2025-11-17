@@ -59,6 +59,7 @@
                 '(compile
                   consult
                   corfu
+                  embark
                   eshell
                   magit
                   magit-section
