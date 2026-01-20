@@ -1,5 +1,7 @@
 ;; my-basics.el -*- lexical-binding: t; -*-
 
+(require 'compile)
+
 (setq-default indent-tabs-mode nil) ;; Indent with spaces
 (setq inhibit-startup-message t) ;; No startup message
 (setq scroll-step 1) ;; smooth scrolling
