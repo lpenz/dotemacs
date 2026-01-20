@@ -2,6 +2,7 @@
 
 set -e -x
 
+emacs --version
 emacs --batch \
     --eval '(progn
               (defvar url-show-status)
