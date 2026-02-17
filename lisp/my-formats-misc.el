@@ -62,6 +62,9 @@
 (use-package dts-mode
   :mode "\\.keymap\\'")
 
+(use-package yang-mode
+  :mode "\\.yang\\'")
+
 ;; (add-to-list 'auto-mode-alist '("\\.m$" . octave-mode))
 ;; (add-to-list 'auto-mode-alist '("valgrind.*\\.supp$" . conf-mode))
 
