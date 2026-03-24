@@ -63,6 +63,7 @@
                   eshell
                   magit
                   magit-section
+                  magit-repos
                   xref
                   vertico))
   :config
