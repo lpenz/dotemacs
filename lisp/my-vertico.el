@@ -15,7 +15,7 @@
     "Save all buffers and compile the project."
     (interactive)
     (save-some-buffers t)
-    (project-compile))
+    (call-interactively #'project-compile))
   (defun vertico-down-from-outside ()
     "Move to next candidate in minibuffer, even when minibuffer isn't selected."
     (interactive)

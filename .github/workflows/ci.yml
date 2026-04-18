@@ -19,3 +19,5 @@ jobs:
           version: ${{ matrix.emacs_version }}
       - name: Check startup
         run: ./test-startup.sh
+      - name: Byte-compile lint
+        run: ./test-lint.sh
