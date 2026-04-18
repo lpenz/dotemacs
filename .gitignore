@@ -19,3 +19,4 @@
 /.lsp-session*
 /tree-sitter/
 /projects
+*.elc

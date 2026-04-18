@@ -1,10 +1,11 @@
 ;; my-theme.el -*- lexical-binding: t; -*-
 
 (use-package spacemacs-theme
-  :defer t
+  :demand t
   :init
   (defvar spacemacs-theme-custom-colors nil)
   (setq spacemacs-theme-custom-colors '((green-bg-s . "#00ff00" ) (bg1 . "#262626")))
+  :config
   (load-theme 'spacemacs-dark t))
 
 
