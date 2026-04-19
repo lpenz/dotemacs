@@ -25,9 +25,22 @@ emacs --batch \
                    (require (quote relint))
                    (dolist (file files)
                      (message "Relinting %s..." file)
-                     (relint-file file))
+                     (with-current-buffer (get-buffer-create "*relint*")
+                       (erase-buffer)
+                       (relint-file file)
+                       (when (> (buffer-size) 0)
+                         (error "Relint failed for %s:\n%s" file (buffer-string)))))
 
                    ;; 3. Checkdoc check
                    (dolist (file files)
                      (message "Checking documentation in %s..." file)
-                     (checkdoc-file file)))))'
+                     (with-current-buffer (find-file-noselect file)
+                       (let ((diag-buffer "*Checkdoc-Log*"))
+                         (if (get-buffer diag-buffer)
+                             (kill-buffer diag-buffer))
+                         (setq checkdoc-diagnostic-buffer diag-buffer)
+                         (checkdoc-current-buffer t)
+                         (when (get-buffer diag-buffer)
+                           (error "Checkdoc failed for %s:\n%s" file
+                                  (with-current-buffer diag-buffer
+                                    (buffer-string))))))))))'
