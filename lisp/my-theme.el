@@ -1,4 +1,9 @@
-;; my-theme.el -*- lexical-binding: t; -*-
+;;; my-theme.el --- My theme configuration -*- lexical-binding: t; -*-
+
+;;; Commentary:
+;; My theme configuration.
+
+;;; Code:
 
 (use-package spacemacs-theme
   :demand t
@@ -16,4 +21,4 @@
   (set-fontset-font t 'unicode "Noto Color Emoji" nil 'prepend))
 
 (provide 'my-theme)
-
+;;; my-theme.el ends here

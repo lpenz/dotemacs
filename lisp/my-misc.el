@@ -1,4 +1,9 @@
-;; my-misc.el -*- lexical-binding: t; -*-
+;;; my-misc.el --- My misc configuration -*- lexical-binding: t; -*-
+
+;;; Commentary:
+;; My misc configuration.
+
+;;; Code:
 
 (use-package fill-column-indicator
   :commands set-fill-column)
@@ -35,3 +40,4 @@
 (load custom-file)
 
 (provide 'my-misc)
+;;; my-misc.el ends here

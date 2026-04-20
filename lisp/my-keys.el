@@ -1,4 +1,9 @@
-;; my-keys.el -*- lexical-binding: t; -*-
+;;; my-keys.el --- My keys configuration -*- lexical-binding: t; -*-
+
+;;; Commentary:
+;; My keys configuration.
+
+;;; Code:
 
 (use-package emacs
   :general
@@ -8,4 +13,4 @@
   ("SPC h c"  'unhighlight-regexp))
 
 (provide 'my-keys)
-
+;;; my-keys.el ends here

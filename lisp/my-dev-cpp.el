@@ -1,4 +1,9 @@
-;; my-dev-cpp.el -*- lexical-binding: t; -*-
+;;; my-dev-cpp.el --- My dev-cpp configuration -*- lexical-binding: t; -*-
+
+;;; Commentary:
+;; My dev-cpp configuration.
+
+;;; Code:
 
 (use-package clang-format
   :commands (clang-format
@@ -13,4 +18,4 @@
   :commands clang-format+-mode)
 
 (provide 'my-dev-cpp)
-
+;;; my-dev-cpp.el ends here

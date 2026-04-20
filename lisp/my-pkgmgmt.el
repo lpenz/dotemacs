@@ -1,4 +1,9 @@
-;;; my-pkgmgmt.el -*- lexical-binding: t; -*-
+;;; my-pkgmgmt.el --- My pkgmgmt configuration -*- lexical-binding: t; -*-
+
+;;; Commentary:
+;; My pkgmgmt configuration.
+
+;;; Code:
 
 (defvar bootstrap-version)
 
@@ -34,3 +39,4 @@
   (use-package-always-defer t))
 
 (provide 'my-pkgmgmt)
+;;; my-pkgmgmt.el ends here

@@ -1,4 +1,9 @@
-;; my-corfu.el -*- lexical-binding: t; -*-
+;;; my-corfu.el --- My corfu configuration -*- lexical-binding: t; -*-
+
+;;; Commentary:
+;; My corfu configuration.
+
+;;; Code:
 
 ;; corfu.el - COmpletion in Region FUnction
 (use-package corfu
@@ -61,3 +66,4 @@
   )
 
 (provide 'my-corfu)
+;;; my-corfu.el ends here

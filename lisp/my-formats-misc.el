@@ -1,4 +1,9 @@
-;; my-formats-misc.el -*- lexical-binding: t; -*-
+;;; my-formats-misc.el --- My formats-misc configuration -*- lexical-binding: t; -*-
+
+;;; Commentary:
+;; My formats-misc configuration.
+
+;;; Code:
 
 (use-package lua-mode
   :mode "\\.lua\\'")
@@ -86,3 +91,4 @@
             ))
 
 (provide 'my-formats-misc)
+;;; my-formats-misc.el ends here

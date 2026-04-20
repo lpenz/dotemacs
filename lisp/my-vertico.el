@@ -1,4 +1,9 @@
-;; my-vertico.el -*- lexical-binding: t; -*-
+;;; my-vertico.el --- My vertico configuration -*- lexical-binding: t; -*-
+
+;;; Commentary:
+;; My vertico configuration.
+
+;;; Code:
 
 (use-package vertico
   :init
@@ -128,3 +133,4 @@
   (embark-collect-mode . consult-preview-at-point-mode))
 
 (provide 'my-vertico)
+;;; my-vertico.el ends here

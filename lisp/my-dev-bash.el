@@ -1,4 +1,9 @@
-;; my-dev-bash.el -*- lexical-binding: t; -*-
+;;; my-dev-bash.el --- My dev-bash configuration -*- lexical-binding: t; -*-
+
+;;; Commentary:
+;; My dev-bash configuration.
+
+;;; Code:
 
 (add-hook 'bash-ts-mode-hook
           (lambda()
@@ -11,3 +16,4 @@
             ))
 
 (provide 'my-dev-bash)
+;;; my-dev-bash.el ends here

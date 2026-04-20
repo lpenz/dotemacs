@@ -1,4 +1,9 @@
-;; my-compilation.el -*- lexical-binding: t; -*-
+;;; my-compilation.el --- My compilation configuration -*- lexical-binding: t; -*-
+
+;;; Commentary:
+;; My compilation configuration.
+
+;;; Code:
 
 ;; Make compilation buffer tail by default
 
@@ -17,3 +22,4 @@
 (add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
 
 (provide 'my-compilation)
+;;; my-compilation.el ends here

@@ -1,4 +1,9 @@
-;; my-apheleia.el -*- lexical-binding: t; -*-
+;;; my-apheleia.el --- My apheleia configuration -*- lexical-binding: t; -*-
+
+;;; Commentary:
+;; My apheleia configuration.
+
+;;; Code:
 
 (use-package apheleia
   :demand t
@@ -15,3 +20,4 @@
   )
 
 (provide 'my-apheleia)
+;;; my-apheleia.el ends here

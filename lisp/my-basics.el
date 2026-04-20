@@ -1,4 +1,9 @@
-;; my-basics.el -*- lexical-binding: t; -*-
+;;; my-basics.el --- My basics configuration -*- lexical-binding: t; -*-
+
+;;; Commentary:
+;; My basics configuration.
+
+;;; Code:
 
 (require 'compile)
 
@@ -12,3 +17,4 @@
 (setq compile-command "omnibuild")
 
 (provide 'my-basics)
+;;; my-basics.el ends here

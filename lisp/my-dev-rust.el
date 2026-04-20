@@ -1,4 +1,9 @@
-;; my-dev-rust.el -*- lexical-binding: t; -*-
+;;; my-dev-rust.el --- My dev-rust configuration -*- lexical-binding: t; -*-
+
+;;; Commentary:
+;; My dev-rust configuration.
+
+;;; Code:
 
 (use-package rust-ts-mode
   :mode "\\.rs\\'"
@@ -24,4 +29,4 @@
   )
 
 (provide 'my-dev-rust)
-
+;;; my-dev-rust.el ends here

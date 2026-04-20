@@ -1,4 +1,9 @@
-;; my-flycheck.el -*- lexical-binding: t; -*-
+;;; my-flycheck.el --- My flycheck configuration -*- lexical-binding: t; -*-
+
+;;; Commentary:
+;; My flycheck configuration.
+
+;;; Code:
 
 (use-package flycheck
   :init
@@ -11,4 +16,4 @@
   )
 
 (provide 'my-flycheck)
-
+;;; my-flycheck.el ends here

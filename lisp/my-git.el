@@ -1,4 +1,9 @@
-;; my-git.el -*- lexical-binding: t; -*-
+;;; my-git.el --- My git configuration -*- lexical-binding: t; -*-
+
+;;; Commentary:
+;; My git configuration.
+
+;;; Code:
 
 (use-package magit
   :init
@@ -17,3 +22,4 @@
   (global-git-gutter-mode +1))
 
 (provide 'my-git)
+;;; my-git.el ends here

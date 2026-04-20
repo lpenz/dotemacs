@@ -1,4 +1,9 @@
-;; my-treesitter.el -*- lexical-binding: t; -*-
+;;; my-treesitter.el --- My treesitter configuration -*- lexical-binding: t; -*-
+
+;;; Commentary:
+;; My treesitter configuration.
+
+;;; Code:
 
 (require 'treesit)
 
@@ -59,3 +64,4 @@ URL is the git repository for the tree-sitter grammar."
     (funcall mode)))
 
 (provide 'my-treesitter)
+;;; my-treesitter.el ends here

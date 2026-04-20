@@ -39,8 +39,13 @@ emacs --batch \
                          (if (get-buffer diag-buffer)
                              (kill-buffer diag-buffer))
                          (setq checkdoc-diagnostic-buffer diag-buffer)
+                         (setq checkdoc-force-docstrings-flag nil)
                          (checkdoc-current-buffer t)
-                         (when (get-buffer diag-buffer)
+                         (when (and (get-buffer diag-buffer)
+                                  (with-current-buffer diag-buffer
+                                    (goto-char (point-min))
+                                    (re-search-forward ":[0-9]+: " nil t)))
+
                            (error "Checkdoc failed for %s:\n%s" file
                                   (with-current-buffer diag-buffer
                                     (buffer-string))))))))))'

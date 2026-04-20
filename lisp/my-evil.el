@@ -1,4 +1,9 @@
-;; my-evil.el -*- lexical-binding: t; -*-
+;;; my-evil.el --- My evil configuration -*- lexical-binding: t; -*-
+
+;;; Commentary:
+;; My evil configuration.
+
+;;; Code:
 
 (use-package general
   :demand t
@@ -70,3 +75,4 @@
   (evil-collection-init))
 
 (provide 'my-evil)
+;;; my-evil.el ends here

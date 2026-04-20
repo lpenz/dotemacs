@@ -1,4 +1,9 @@
-;; my-lsp.el -*- lexical-binding: t; -*-
+;;; my-lsp.el --- My lsp configuration -*- lexical-binding: t; -*-
+
+;;; Commentary:
+;; My lsp configuration.
+
+;;; Code:
 
 (use-package lsp-mode
   :general
@@ -26,3 +31,4 @@
 ;; (use-package dap-LANGUAGE) to load the dap adapter for your language
 
 (provide 'my-lsp)
+;;; my-lsp.el ends here

@@ -1,4 +1,9 @@
-;; my-dev-python.el -*- lexical-binding: t; -*-
+;;; my-dev-python.el --- My dev-python configuration -*- lexical-binding: t; -*-
+
+;;; Commentary:
+;; My dev-python configuration.
+
+;;; Code:
 
 (use-package lsp-pyright
   :demand t
@@ -18,3 +23,4 @@
             ))
 
 (provide 'my-dev-python)
+;;; my-dev-python.el ends here

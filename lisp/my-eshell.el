@@ -1,3 +1,10 @@
+;;; my-eshell.el --- My eshell configuration -*- lexical-binding: t; -*-
+
+;;; Commentary:
+;; My eshell configuration.
+
+;;; Code:
+
 ;; eshell -*- lexical-binding: t; -*-
 
 (straight-use-package
@@ -15,4 +22,4 @@
   :hook (eshell-mode . esh-autosuggest-mode))
 
 (provide 'my-eshell)
-
+;;; my-eshell.el ends here
