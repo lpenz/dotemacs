@@ -2,6 +2,8 @@
 
 set -e -x
 
+trap 'find lisp -name "*.elc" -delete' EXIT
+
 emacs --batch \
     --eval '(progn
               (defvar url-show-status)
