@@ -15,7 +15,7 @@
              :type git
              :host github
              :repo "SavchenkoValeriy/emacs-clang-format-plus")
-  :commands clang-format+-mode)
+  :hook ((c-mode c++-mode) . clang-format+-mode))
 
 (provide 'my-dev-cpp)
 ;;; my-dev-cpp.el ends here
