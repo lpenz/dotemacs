@@ -57,8 +57,7 @@
 
 (use-package evil-collection
   :demand t
-  :after evil
-  :after cape
+  :after (:all evil cape)
   :init
   (setq-default evil-collection-mode-list
                 '(compile
