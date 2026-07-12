@@ -20,7 +20,7 @@
 (setq initial-major-mode 'fundamental-mode)
 (setq package-enable-at-startup nil) ;; ensure package doesn't interfere
 ;; some things that are useful for lsp-mode and also during startup
-(setq gc-cons-threshold 100000000
+(setq gc-cons-threshold 134217728
       read-process-output-max (* 1024 1024))
 
 (provide 'early-init)
