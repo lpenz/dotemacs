@@ -15,8 +15,7 @@
   (setq lsp-completion-provider :none)
   ;; Disable generic snippets
   (setq lsp-enable-snippet nil)
-  (setq lsp-enable-file-watchers nil)
-  )
+  (setq lsp-enable-file-watchers nil))
 
 ;; extensions:
 
