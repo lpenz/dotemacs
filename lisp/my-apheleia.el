@@ -16,6 +16,8 @@
         '("yamlfix" "-"))
   (setf (alist-get 'fish-indent apheleia-formatters)
         '("fish" "-c" "fish_indent"))
+  (setf (alist-get 'nixpkgs-fmt apheleia-formatters)
+        '("nixpkgs-fmt"))
   (apheleia-global-mode 1)
   )
 

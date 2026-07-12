@@ -35,17 +35,21 @@
 (use-package markdown-mode
   :mode "\\.md\\'")
 
-(use-package nix-mode
-  :mode "\\.nix\\'")
+(use-package nix-ts-mode
+  :mode "\\.nix\\'"
+  :hook (nix-ts-mode . (lambda()
+                         (setq-local apheleia-formatter 'nixpkgs-fmt)))
+  :init
+  (my-treesit-setup-lang
+   'nix
+   #'nix-ts-mode
+   "https://github.com/nix-community/tree-sitter-nix"))
 
 (use-package fish-mode
   :mode "\\.fish\\'"
   :hook (fish-mode . (lambda()
                        (setq-local apheleia-formatter '(fish-indent))
                        )))
-
-(use-package nixpkgs-fmt
-  :hook (nix-mode . nixpkgs-fmt-on-save-mode))
 
 (use-package rpm-spec-mode
   :mode "\\.spec\\'")
