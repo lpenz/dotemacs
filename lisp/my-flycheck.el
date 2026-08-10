@@ -8,7 +8,9 @@
 (use-package flycheck
   :init
   (global-flycheck-mode)
+  (global-flycheck-annotate-mode)
   :config
+  (global-flycheck-eglot-mode 1)
   (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc python-pylint))
   (setq-default flycheck-python-flake8-executable "/usr/bin/flake8")
   (add-to-list 'safe-local-variable-values (quote ((flycheck-gcc-language-standard . "c++17"))))
