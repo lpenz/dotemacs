@@ -8,7 +8,7 @@
 (use-package flycheck
   :init
   (global-flycheck-mode)
-  (global-flycheck-annotate-mode)
+  ;; (global-flycheck-annotate-mode)
   :config
   (global-flycheck-eglot-mode 1)
   (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc python-pylint))
